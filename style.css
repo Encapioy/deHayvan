@@ -398,6 +398,7 @@ nav {
     height: 100%;
     background-color: hsla(0, 0%, 100%, 0.2);
 }
+
 /* 
 .grid-line.gl-1 {
     right: 1px;
@@ -430,6 +431,15 @@ nav {
     font-weight: 400;
 }
 
+.gallery-close {
+    position: relative;
+    padding: 5px 8px;
+    background-color: #000;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+}
+
 .gallery-layout {
     display: grid;
     grid-auto-columns: 1fr;
@@ -443,9 +453,106 @@ nav {
     grid-template-rows: auto auto auto auto auto auto auto;
 }
 
-.gi-1 {
-    background-image: url(images/amphibia.jpg);
+.gallery-img {
     background-position: 50% 50%;
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+.gi-1 {
+    background-image: url(images/amphibia.jpg);
+}
+
+.gi-2 {
+    background-image: url(images/mammals.jpg);
+}
+
+.gi-3 {
+    background-image: url(images/poultry.jpg);
+}
+
+.gi-4 {
+    background-image: url(images/reptile.jpg);
+}
+
+.gi-5 {
+    background-image: url(images/creditBg-2.jpg);
+}
+
+.gi-6 {
+    background-image: url(images/creditBg-2.jpg);
+}
+
+.gi-7 {
+    background-image: url(images/creditBg-6.jpg);
+}
+
+.gi-8 {
+    background-image: url(images/amphibia.jpg);
+}
+
+.gi-9 {
+    background-image: url(images/poultry.jpg);
+}
+
+.gi-10 {
+    background-image: url(images/mammals.jpg);
+}
+
+.gi-11 {
+    background-image: url(images/reptile.jpg);
+}
+
+#g-img-1 {
+    grid-row-start: span 2;
+    grid-row-end: span 2;
+    grid-column-start: span 3;
+}
+
+#g-img-2 {
+    grid-row-start: span 2;
+    grid-row-end: span 2;
+    grid-column-start: span 1;
+}
+
+#g-img-4 {
+    grid-row-start: span 2;
+    grid-row-end: span 2;
+    grid-column-start: span 3;
+}
+
+#g-img-6 {
+    grid-row-start: span 2;
+    grid-row-end: span 2;
+    grid-column-start: span 2;
+}
+
+#g-img-7 {
+    grid-row-start: span 5;
+    grid-row-end: span 5;
+    grid-column-start: span 3;
+}
+
+#g-img-8 {
+    grid-row-start: span 4;
+    grid-row-end: span 4;
+    grid-column-start: span 3;
+}
+
+#g-img-9 {
+    grid-row-start: span 3;
+    grid-row-end: span 3;
+    grid-column-start: span 2;
+}
+
+#g-img-10 {
+    grid-row-start: span 1;
+    grid-row-end: span 1;
+    grid-column-start: span 1;
+}
+
+#g-img-11 {
+    grid-row-start: span 1;
+    grid-row-end: span 1;
+    grid-column-start: span 2;
 }

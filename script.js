@@ -28,6 +28,12 @@ function parallax(e) {
 //     layer.style.transform = `translateX(calc(-50% + ${-xValue * speedx }px))`
 // })
 
+const galleryClose = document.querySelector(".gallery-close");
+const galleryImg = document.querySelectorAll(".gallery-img");
+galleryClose.addEventListener("click", (e) => {
+    
+})
+
 
 gsap.to("#header #head-img", {
     scale: 1.5, duration: 7,
