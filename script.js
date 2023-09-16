@@ -92,7 +92,7 @@ gImg11.style.transform = "scale(0.6)";
 
 
 gsap.to("#header #head-img", {
-    scale: 1.5, duration: 7,
+    scale: 1.5, duration: 15,
     scrollTrigger: {
         trigger: "#header",
         pin: true,
@@ -100,11 +100,11 @@ gsap.to("#header #head-img", {
     }
 });
 
-gsap.to("#header", {
+gsap.to("#head-img", {
     opacity: 0,
     scrollTrigger: {
-        start: '24% center',
-        end: '30% center',
+        start: '16% center',
+        end: '20% center',
         scrub: 3
     }
 });
@@ -113,7 +113,7 @@ gsap.to(".header-before", {
     opacity: 0,
     scrollTrigger: {
         start: 'top top',
-        end: '20% center',
+        end: '9% center',
         scrub: 1
     }
 });
@@ -121,26 +121,47 @@ gsap.to(".header-before", {
 gsap.from(".header-after h1", {
     opacity: 0,
     scrollTrigger: {
-        start: '15% center',
-        end: '22% center',
+        start: '9% center',
+        end: '10% center',
         scrub: 1
     }
 });
 
 gsap.from(".header-after p", {
-    opacity: 0, y: 40,
+    opacity: 0, y: 60,
     scrollTrigger: {
-        start: '15% center',
-        end: '22% center',
+        start: '9% center',
+        end: '13% center',
         scrub: 1
     }
 });
 
+gsap.to(".header-after-text", {
+    opacity: 0,
+    scrollTrigger: {
+        start: '19% center',
+        end: '21% center',
+        scrub: 1
+    }
+});
+
+gsap.fromTo(".draw-line-inner-1", {
+    y: -220
+},
+    {
+        y: 220,
+        scrollTrigger: {
+            start: '12% center',
+            end: '24% center',
+            scrub: 1
+        }
+    });
+
 gsap.from(".goonies-1", {
     rotation: 90,
     scrollTrigger: {
-        start: '50% center',
-        end: '80% center',
+        start: '30% center',
+        end: '45% center',
         scrub: 2
     }
 });
@@ -148,8 +169,8 @@ gsap.from(".goonies-1", {
 gsap.to(".goonies-2", {
     rotation: 360, y: 550, opacity: 0.4,
     scrollTrigger: {
-        start: '52% center',
-        end: '80% center',
+        start: '32% center',
+        end: '50% center',
         scrub: 2
     }
 });
@@ -159,51 +180,52 @@ gsap.to(".goonies-3", {
     scrollTrigger: {
         start: '55% center',
         end: '80% center',
+        markers: true,
         scrub: 2
     }
 });
 
-gsap.from(".goonies-4", {
-    y: 400,
-    scrollTrigger: {
-        start: '55% center',
-        end: '80% center',
-        scrub: 2
-    }
-});
+// gsap.from(".goonies-4", {
+//     y: 400,
+//     scrollTrigger: {
+//         start: '55% center',
+//         end: '80% center',
+//         scrub: 2
+//     }
+// });
 
-gsap.from(".goonies-5", {
-    rotation: -180, y: 400,
-    scrollTrigger: {
-        start: '60% center',
-        end: '80% center',
-        scrub: 2
-    }
-});
+// gsap.from(".goonies-5", {
+//     rotation: -180, y: 400,
+//     scrollTrigger: {
+//         start: '60% center',
+//         end: '80% center',
+//         scrub: 2
+//     }
+// });
 
-gsap.from(".goonies-text", {
-    y: 200, opacity: 0,
-    scrollTrigger: {
-        start: '60% center',
-        end: '70% center',
-        scrub: 2
-    }
-});
+// gsap.from(".goonies-text", {
+//     y: 200, opacity: 0,
+//     scrollTrigger: {
+//         start: '60% center',
+//         end: '70% center',
+//         scrub: 2
+//     }
+// });
 
-gsap.from(".skull", {
-    scale: 0.5,
-    scrollTrigger: {
-        start: '80% center',
-        end: '95% center',
-        scrub: 2
-    }
-});
+// gsap.from(".skull", {
+//     scale: 0.5,
+//     scrollTrigger: {
+//         start: '80% center',
+//         end: '95% center',
+//         scrub: 2
+//     }
+// });
 
-gsap.from(".people", {
-    y: 200,
-    scrollTrigger: {
-        start: '80% center',
-        end: '95% center',
-        scrub: 2
-    }
-});
+// gsap.from(".people", {
+//     y: 200,
+//     scrollTrigger: {
+//         start: '80% center',
+//         end: '95% center',
+//         scrub: 2
+//     }
+// });
