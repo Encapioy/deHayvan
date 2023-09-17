@@ -17,6 +17,16 @@ nav {
     letter-spacing: 1.2px;
 }
 
+.pulse {
+    position: relative;
+    z-index: 9999;
+    width: 6px;
+    height: 6px;
+    margin-top: 5px;
+    border-radius: 20px;
+    background-color: #fff;
+}
+
 /* HEADER */
 #header {
     position: relative;
@@ -183,47 +193,47 @@ nav {
     transform: scale(1.2);
 }
 
-/* GOONIES */
-#goonies {
+/* STONE */
+#stone {
     height: 100vh;
     position: relative;
 
 }
 
-#goonies img {
+#stone img {
     position: absolute;
 }
 
-.goonies-1 {
+.stone-1 {
     width: 195px;
     opacity: 0.5;
 }
 
-.goonies-2 {
+.stone-2 {
     width: 152px;
     margin-right: 350px;
     margin-top: -120px;
 }
 
-.goonies-3 {
+.stone-3 {
     width: 90px;
     margin-left: 450px;
     opacity: 0.6;
 }
 
-.goonies-4 {
+.stone-4 {
     width: 119px;
     margin-right: 600px;
     opacity: 0.4;
 }
 
-.goonies-5 {
+.stone-5 {
     margin-left: 500px;
     width: 195px;
     opacity: 0.4;
 }
 
-.goonies-title h2 {
+.stone-title h2 {
     position: absolute;
     font-size: 3rem;
     color: #fff;

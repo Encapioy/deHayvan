@@ -91,6 +91,54 @@ gImg10.style.transform = "translateY(-80px)";
 gImg11.style.transform = "scale(0.6)";
 
 
+gsap.fromTo(".pulse", {
+    x: 365
+},
+    {
+        x: 680,
+        scrollTrigger: {
+            start: '85% center',
+            end: '95% center',
+            scrub: 1
+        }
+    });
+
+gsap.fromTo(".pulse", {
+    x: 45
+},
+    {
+        x: 365,
+        scrollTrigger: {
+            start: '55% center',
+            end: '65% center',
+            scrub: 1
+        }
+    });
+
+gsap.fromTo(".pulse", {
+    x: -260,
+},
+    {
+        x: 45,
+        scrollTrigger: {
+            start: '25% center',
+            end: '35% center',
+            scrub: 1
+        }
+    });
+
+gsap.fromTo(".pulse", {
+    opacity: 0,
+},
+    {
+        opacity: 1,
+        scrollTrigger: {
+            start: 'top top',
+            end: '22% center',
+            scrub: 1
+        }
+    });
+
 gsap.to("#header #head-img", {
     scale: 1.5, duration: 15,
     scrollTrigger: {
@@ -157,7 +205,7 @@ gsap.fromTo(".draw-line-inner-1", {
         }
     });
 
-gsap.from(".goonies-1", {
+gsap.from(".stone-1", {
     rotation: 90,
     scrollTrigger: {
         start: '30% center',
@@ -166,7 +214,7 @@ gsap.from(".goonies-1", {
     }
 });
 
-gsap.to(".goonies-2", {
+gsap.to(".stone-2", {
     rotation: 360, y: 550, opacity: 0.4,
     scrollTrigger: {
         start: '32% center',
@@ -175,57 +223,56 @@ gsap.to(".goonies-2", {
     }
 });
 
-gsap.to(".goonies-3", {
+gsap.to(".stone-3", {
     rotation: -180, y: 460,
     scrollTrigger: {
-        start: '55% center',
-        end: '80% center',
-        markers: true,
+        start: '38% center',
+        end: '53% center',
         scrub: 2
     }
 });
 
-// gsap.from(".goonies-4", {
-//     y: 400,
-//     scrollTrigger: {
-//         start: '55% center',
-//         end: '80% center',
-//         scrub: 2
-//     }
-// });
+gsap.from(".stone-4", {
+    y: 400,
+    scrollTrigger: {
+        start: '37% center',
+        end: '50% center',
+        scrub: 2
+    }
+});
 
-// gsap.from(".goonies-5", {
-//     rotation: -180, y: 400,
-//     scrollTrigger: {
-//         start: '60% center',
-//         end: '80% center',
-//         scrub: 2
-//     }
-// });
+gsap.from(".stone-5", {
+    rotation: -180, y: 400,
+    scrollTrigger: {
+        start: '39% center',
+        end: '50% center',
+        scrub: 2
+    }
+});
 
-// gsap.from(".goonies-text", {
-//     y: 200, opacity: 0,
-//     scrollTrigger: {
-//         start: '60% center',
-//         end: '70% center',
-//         scrub: 2
-//     }
-// });
+gsap.from(".stone-text", {
+    y: 80, opacity: 0,
+    scrollTrigger: {
+        start: '38% center',
+        end: '48% center',
+        scrub: 2
+    }
+});
 
-// gsap.from(".skull", {
-//     scale: 0.5,
-//     scrollTrigger: {
-//         start: '80% center',
-//         end: '95% center',
-//         scrub: 2
-//     }
-// });
+gsap.from(".skull", {
+    scale: 0.5,
+    scrollTrigger: {
+        start: '60% center',
+        end: '68% center',
+        scrub: 2
+    }
+});
 
-// gsap.from(".people", {
-//     y: 200,
-//     scrollTrigger: {
-//         start: '80% center',
-//         end: '95% center',
-//         scrub: 2
-//     }
-// });
+gsap.from(".people", {
+    y: 200,
+    scrollTrigger: {
+        start: '60% center',
+        end: '75% center',
+        scrub: 2
+    }
+});
