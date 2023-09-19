@@ -161,233 +161,234 @@ closeVideo.addEventListener("click", () => {
     nav.style.transform = "translateY(0px)"
 })
 
-// gsap.registerPlugin(ScrollTrigger);
+let mm = gsap.matchMedia();
 
-// ScrollTrigger.matchMedia({
-//     '(max-width:992px)': function () {
+mm.add({
+    isDekstop: "(min-width: 501px)",
+    isMobile: "(max-width: 500px)"
+}, (context) => {
+    let { isMobile, isDekstop } = context.conditions;
 
-//         gsap.to("#header #head-img", {
-//             scale: 1.5, duration: 20000,
-//             scrollTrigger: {
-//                 trigger: "#header",
-//                 pin: true,
-//                 scrub: 3
-//             }
-//         });
+    gsap.fromTo(".pulse", {
+        x: isMobile ? 195 : 653
+    },
+        {
+            x: isMobile ? 293 : 965,
+            scrollTrigger: {
+                start: isMobile ? '79% center' : '85% center',
+                end: isMobile ? '84% center' : '95% center',
+                scrub: 1
+            }
+        });
 
-//     },
-// })
+    gsap.fromTo(".pulse", {
+        x: isMobile ? 95 : 330
+    },
+        {
+            x: isMobile ? 195 : 653,
+            scrollTrigger: {
+                start: isMobile ? '53% center' : '55% center',
+                end: isMobile ? '58% center' : '65% center',
+                scrub: 1
+            }
+        });
 
-gsap.fromTo(".pulse", {
-    x: 653
-},
-    {
-        x: 965,
+    gsap.fromTo(".pulse", {
+        x: isMobile ? 10 : 23,
+    },
+        {
+            x: isMobile ? 95 : 330,
+            scrollTrigger: {
+                start: isMobile ? '23% center' : '25% center',
+                end: isMobile ? '28% center' : '35% center',
+                scrub: 1
+            }
+        });
+
+    gsap.fromTo(".pulse", {
+        opacity: 0,
+    },
+        {
+            opacity: 1,
+            scrollTrigger: {
+                start: 'top top',
+                end: '22% center',
+                scrub: 1
+            }
+        });
+
+    gsap.to("#header #head-img", {
+        scale: 1.5, duration: 15,
         scrollTrigger: {
-            start: '85% center',
-            end: '95% center',
-            scrub: 1
+            trigger: "#header",
+            pin: true,
+            scrub: 3
         }
     });
 
-gsap.fromTo(".pulse", {
-    x: 330
-},
-    {
-        x: 653,
+    gsap.to("#head-img", {
+        opacity: 0,
         scrollTrigger: {
-            start: '55% center',
-            end: '65% center',
-            scrub: 1
+            start: isMobile ? '10% center' : '16% center',
+            end: isMobile ? '16% center' : '20% center',
+            scrub: 3
         }
     });
 
-gsap.fromTo(".pulse", {
-    x: 23,
-},
-    {
-        x: 330,
-        scrollTrigger: {
-            start: '25% center',
-            end: '35% center',
-            scrub: 1
-        }
-    });
-
-gsap.fromTo(".pulse", {
-    opacity: 0,
-},
-    {
-        opacity: 1,
+    gsap.to(".header-before", {
+        opacity: 0,
         scrollTrigger: {
             start: 'top top',
-            end: '22% center',
+            end: '9% center',
             scrub: 1
         }
     });
 
-gsap.to("#header #head-img", {
-    scale: 1.5, duration: 15,
-    scrollTrigger: {
-        trigger: "#header",
-        pin: true,
-        scrub: 3
-    }
-});
-
-gsap.to("#head-img", {
-    opacity: 0,
-    scrollTrigger: {
-        start: '16% center',
-        end: '20% center',
-        markers: true,
-        scrub: 3
-    }
-});
-
-gsap.to(".header-before", {
-    opacity: 0,
-    scrollTrigger: {
-        start: 'top top',
-        end: '9% center',
-        scrub: 1
-    }
-});
-
-gsap.from(".header-after h1", {
-    opacity: 0,
-    scrollTrigger: {
-        start: '9% center',
-        end: '10% center',
-        scrub: 1
-    }
-});
-
-gsap.from(".header-after p", {
-    opacity: 0, y: 60,
-    scrollTrigger: {
-        start: '9% center',
-        end: '13% center',
-        scrub: 1
-    }
-});
-
-gsap.to(".header-after-text", {
-    opacity: 0,
-    scrollTrigger: {
-        start: '19% center',
-        end: '21% center',
-        scrub: 1
-    }
-});
-
-gsap.fromTo(".draw-line-inner-1", {
-    y: -220
-},
-    {
-        y: 220,
+    gsap.from(".header-after h1", {
+        opacity: 0,
         scrollTrigger: {
-            start: '12% center',
-            end: '24% center',
+            start: '9% center',
+            end: '10% center',
             scrub: 1
         }
     });
 
-gsap.from(".stone-1", {
-    rotation: 90,
-    scrollTrigger: {
-        start: '30% center',
-        end: '45% center',
-        scrub: 2
-    }
-});
+    gsap.from(".header-after p", {
+        opacity: 0, y: 60,
+        scrollTrigger: {
+            start: '9% center',
+            end: '13% center',
+            scrub: 1
+        }
+    });
 
-gsap.to(".stone-2", {
-    rotation: 360, y: 550, opacity: 0.4,
-    scrollTrigger: {
-        start: '32% center',
-        end: '50% center',
-        scrub: 2
-    }
-});
+    gsap.to(".header-after-text", {
+        opacity: 0,
+        scrollTrigger: {
+            start: '19% center',
+            end: '21% center',
+            scrub: 1
+        }
+    });
 
-gsap.to(".stone-3", {
-    rotation: -180, y: 460,
-    scrollTrigger: {
-        start: '38% center',
-        end: '53% center',
-        scrub: 2
-    }
-});
+    gsap.from("#animals", {
+        opacity: 0,
+        scrollTrigger: {
+            start: isMobile ? '18% center' : '23% center',
+            end: isMobile ? '20% center' : '25% center',
+            scrub: 3
+        }
+    });
 
-gsap.from(".stone-4", {
-    y: 400,
-    scrollTrigger: {
-        start: '37% center',
-        end: '50% center',
-        scrub: 2
-    }
-});
+    gsap.fromTo(".draw-line-inner-1", {
+        y: -220
+    },
+        {
+            y: 220,
+            scrollTrigger: {
+                start: '12% center',
+                end: '24% center',
+                scrub: 1
+            }
+        });
 
-gsap.from(".stone-5", {
-    rotation: -180, y: 400,
-    scrollTrigger: {
-        start: '39% center',
-        end: '50% center',
-        scrub: 2
-    }
-});
+    gsap.from(".stone-1", {
+        rotation: 90,
+        scrollTrigger: {
+            start: '30% center',
+            end: '45% center',
+            scrub: 2
+        }
+    });
 
-gsap.from(".stone-text", {
-    y: 80, opacity: 0,
-    scrollTrigger: {
-        start: '38% center',
-        end: '48% center',
-        scrub: 2
-    }
-});
+    gsap.to(".stone-2", {
+        rotation: 360, y: 550, opacity: 0.4,
+        scrollTrigger: {
+            start: '32% center',
+            end: '50% center',
+            scrub: 2
+        }
+    });
 
-gsap.from(".skull", {
-    scale: 0.5,
-    scrollTrigger: {
-        start: '60% center',
-        end: '68% center',
-        scrub: 2
-    }
-});
+    gsap.to(".stone-3", {
+        rotation: -180, y: 460,
+        scrollTrigger: {
+            start: '38% center',
+            end: '53% center',
+            scrub: 2
+        }
+    });
 
-gsap.from(".people", {
-    y: 200,
-    scrollTrigger: {
-        start: '60% center',
-        end: '75% center',
-        scrub: 2
-    }
-});
+    gsap.from(".stone-4", {
+        y: 400,
+        scrollTrigger: {
+            start: '37% center',
+            end: '50% center',
+            scrub: 2
+        }
+    });
 
-gsap.from(".footer-title p", {
-    opacity: 0,
-    scrollTrigger: {
-        start: '88% center',
-        end: '90% center',
-        scrub: 1
-    }
-});
+    gsap.from(".stone-5", {
+        rotation: -180, y: 400,
+        scrollTrigger: {
+            start: '39% center',
+            end: '50% center',
+            scrub: 2
+        }
+    });
 
-gsap.from(".footer-title h1", {
-    y: 30,
-    scrollTrigger: {
-        start: '88% center',
-        end: '90% center',
-        scrub: 1
-    }
-});
+    gsap.from(".stone-text", {
+        y: 80, opacity: 0,
+        scrollTrigger: {
+            start: '38% center',
+            end: '48% center',
+            scrub: 2
+        }
+    });
 
-gsap.from(".back-top", {
-    y: 30,
-    scrollTrigger: {
-        start: '88% center',
-        end: '90% center',
-        scrub: 1
-    }
-});
+    gsap.from(".skull", {
+        scale: 0.5,
+        scrollTrigger: {
+            start: isMobile ? '68% center' : '60% center',
+            end: isMobile ? '70% center' : '68% center',
+            scrub: 2
+        }
+    });
+
+    gsap.from(".people", {
+        y: 200,
+        scrollTrigger: {
+            start: isMobile ? '68% center' : '60% center',
+            end: isMobile ? '75% center' : '75% center',
+            scrub: 2
+        }
+    });
+
+    gsap.from(".footer-title p", {
+        opacity: 0,
+        scrollTrigger: {
+            start: isMobile ? '90% center' : '88% center',
+            end: isMobile ? '92% center' : '90% center',
+            scrub: 1
+        }
+    });
+
+    gsap.from(".footer-title h1", {
+        y: 30,
+        scrollTrigger: {
+            start: isMobile ? '90% center' : '88% center',
+            end: isMobile ? '92% center' : '90% center',
+            scrub: 1
+        }
+    });
+
+    gsap.from(".back-top", {
+        y: 30,
+        scrollTrigger: {
+            start: '88% center',
+            end: '90% center',
+            scrub: 1
+        }
+    });
+
+})
