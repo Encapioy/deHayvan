@@ -3,11 +3,6 @@
 const cardFlex = document.querySelector(".card-flex");
 const layer = document.querySelector(".layer");
 
-// cardFlex.addEventListener('mouseenter', function() {
-
-// })
-
-
 cardFlex.addEventListener("mousemove", parallax);
 function parallax(e) {
     this.querySelectorAll('.layer').forEach(layer => {
@@ -18,15 +13,6 @@ function parallax(e) {
         layer.style.transform = `translateX(${x}px)`
     });
 }
-
-// let xValue = 0;
-
-// cardFlex.addEventListener("mousemove", (e) => {
-//     xValue = e.clientX - window.innerWidth / 100;
-
-//     const speedx = layer.getAttribute('data-speed')
-//     layer.style.transform = `translateX(calc(-50% + ${-xValue * speedx }px))`
-// })
 
 const gClose = document.querySelector(".g-close");
 const titleParent = document.querySelector(".title-parent");
@@ -91,11 +77,112 @@ gImg10.style.transform = "translateY(-80px)";
 gImg11.style.transform = "scale(0.6)";
 
 
+const aC1 = document.querySelector('.ac-1');
+const aC2 = document.querySelector('.ac-2');
+const aC3 = document.querySelector('.ac-3');
+const aC4 = document.querySelector('.ac-4');
+const cV1 = document.querySelector('.cv-1');
+const cV2 = document.querySelector('.cv-2');
+const cV3 = document.querySelector('.cv-3');
+const cV4 = document.querySelector('.cv-4');
+const cInfo1 = document.querySelector('.c-info-1');
+const cInfo2 = document.querySelector('.c-info-2');
+const cInfo3 = document.querySelector('.c-info-3');
+const cInfo4 = document.querySelector('.c-info-4');
+const closeVideo = document.querySelector('.close-video');
+const nav = document.querySelector('nav');
+
+aC1.addEventListener("click", () => {
+    cV1.style.zIndex = "100";
+    cInfo1.style.zIndex = "101";
+    aC1.style.width = "100%";
+    aC2.style.opacity = "0";
+    aC3.style.opacity = "0";
+    aC4.style.opacity = "0";
+    closeVideo.style.opacity = "1";
+    nav.style.transform = "translateY(-100px)"
+})
+
+aC2.addEventListener("click", () => {
+    cV2.style.zIndex = "100";
+    cInfo2.style.zIndex = "101";
+    aC2.style.width = "100%";
+    aC1.style.display = "none";
+    aC3.style.opacity = "0";
+    aC4.style.opacity = "0";
+    closeVideo.style.opacity = "1";
+    nav.style.transform = "translateY(-100px)"
+})
+
+aC3.addEventListener("click", () => {
+    cV3.style.zIndex = "100";
+    cInfo3.style.zIndex = "101";
+    aC3.style.width = "100%";
+    aC1.style.display = "none";
+    aC2.style.display = "none";
+    aC4.style.opacity = "0";
+    closeVideo.style.opacity = "1";
+    nav.style.transform = "translateY(-100px)"
+})
+
+aC4.addEventListener("click", () => {
+    cV4.style.zIndex = "100";
+    cInfo4.style.zIndex = "101";
+    aC4.style.width = "100%";
+    aC1.style.display = "none";
+    aC2.style.display = "none";
+    aC3.style.display = "none";
+    closeVideo.style.opacity = "1";
+    nav.style.transform = "translateY(-100px)"
+})
+
+closeVideo.addEventListener("click", () => {
+    cV1.style.zIndex = "";
+    cV2.style.zIndex = "";
+    cV3.style.zIndex = "";
+    cV4.style.zIndex = "";
+    cInfo1.style.zIndex = "";
+    cInfo2.style.zIndex = "";
+    cInfo3.style.zIndex = "";
+    cInfo4.style.zIndex = "";
+    aC1.style.width = "";
+    aC2.style.width = "";
+    aC3.style.width = "";
+    aC4.style.width = "";
+    aC1.style.opacity = "1";
+    aC2.style.opacity = "1";
+    aC3.style.opacity = "1";
+    aC4.style.opacity = "1";
+    aC1.style.display = "";
+    aC2.style.display = "";
+    aC3.style.display = "";
+    aC4.style.display = "";
+    closeVideo.style.opacity = "0";
+    nav.style.transform = "translateY(0px)"
+})
+
+// gsap.registerPlugin(ScrollTrigger);
+
+// ScrollTrigger.matchMedia({
+//     '(max-width:992px)': function () {
+
+//         gsap.to("#header #head-img", {
+//             scale: 1.5, duration: 20000,
+//             scrollTrigger: {
+//                 trigger: "#header",
+//                 pin: true,
+//                 scrub: 3
+//             }
+//         });
+
+//     },
+// })
+
 gsap.fromTo(".pulse", {
-    x: 365
+    x: 653
 },
     {
-        x: 680,
+        x: 965,
         scrollTrigger: {
             start: '85% center',
             end: '95% center',
@@ -104,10 +191,10 @@ gsap.fromTo(".pulse", {
     });
 
 gsap.fromTo(".pulse", {
-    x: 45
+    x: 330
 },
     {
-        x: 365,
+        x: 653,
         scrollTrigger: {
             start: '55% center',
             end: '65% center',
@@ -116,10 +203,10 @@ gsap.fromTo(".pulse", {
     });
 
 gsap.fromTo(".pulse", {
-    x: -260,
+    x: 23,
 },
     {
-        x: 45,
+        x: 330,
         scrollTrigger: {
             start: '25% center',
             end: '35% center',
@@ -153,6 +240,7 @@ gsap.to("#head-img", {
     scrollTrigger: {
         start: '16% center',
         end: '20% center',
+        markers: true,
         scrub: 3
     }
 });
@@ -274,5 +362,32 @@ gsap.from(".people", {
         start: '60% center',
         end: '75% center',
         scrub: 2
+    }
+});
+
+gsap.from(".footer-title p", {
+    opacity: 0,
+    scrollTrigger: {
+        start: '88% center',
+        end: '90% center',
+        scrub: 1
+    }
+});
+
+gsap.from(".footer-title h1", {
+    y: 30,
+    scrollTrigger: {
+        start: '88% center',
+        end: '90% center',
+        scrub: 1
+    }
+});
+
+gsap.from(".back-top", {
+    y: 30,
+    scrollTrigger: {
+        start: '88% center',
+        end: '90% center',
+        scrub: 1
     }
 });
