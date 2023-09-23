@@ -1,4 +1,18 @@
+function scrollToTop() {
+    window.scrollTo(0, 0);
+}
 
+function counter() {
+    var count = setInterval(function () {
+        var c = parseInt($('.counter').text());
+        $('.counter').text((++c).toString());
+        if (c == 100) {
+            clearInterval(count);
+            $('.preloader').addClass('active')
+        }
+    }, 60)
+}
+counter()
 
 const cardFlex = document.querySelector(".card-flex");
 const layer = document.querySelector(".layer");
@@ -17,6 +31,7 @@ function parallax(e) {
 const gClose = document.querySelector(".g-close");
 const titleParent = document.querySelector(".title-parent");
 const closeGallery = document.querySelector(".close-gallery");
+const galleryImg = document.querySelectorAll(".gallery-img");
 const gImg1 = document.querySelector("#g-img-1");
 const gImg2 = document.querySelector("#g-img-2");
 const gImg3 = document.querySelector("#g-img-3");
@@ -33,17 +48,9 @@ gClose.addEventListener("click", () => {
     titleParent.style.opacity = 0;
     closeGallery.style.opacity = 1;
     closeGallery.style.transform = 'translateY(34vh)';
-    gImg1.removeAttribute('style');
-    gImg2.removeAttribute('style');
-    gImg3.removeAttribute('style');
-    gImg4.removeAttribute('style');
-    gImg5.removeAttribute('style');
-    gImg6.removeAttribute('style');
-    gImg7.removeAttribute('style');
-    gImg8.removeAttribute('style');
-    gImg9.removeAttribute('style');
-    gImg10.removeAttribute('style');
-    gImg11.removeAttribute('style');
+    for (let i = 0; i < galleryImg.length; i++) {
+        galleryImg[i].removeAttribute('style');
+    }
 
 })
 
@@ -77,14 +84,17 @@ gImg10.style.transform = "translateY(-80px)";
 gImg11.style.transform = "scale(0.6)";
 
 
+const animalsCard = document.querySelectorAll('.animals-card');
 const aC1 = document.querySelector('.ac-1');
 const aC2 = document.querySelector('.ac-2');
 const aC3 = document.querySelector('.ac-3');
 const aC4 = document.querySelector('.ac-4');
+const cardVideo = document.querySelectorAll('.card-video');
 const cV1 = document.querySelector('.cv-1');
 const cV2 = document.querySelector('.cv-2');
 const cV3 = document.querySelector('.cv-3');
 const cV4 = document.querySelector('.cv-4');
+const cardInfo = document.querySelectorAll('.card-info');
 const cInfo1 = document.querySelector('.c-info-1');
 const cInfo2 = document.querySelector('.c-info-2');
 const cInfo3 = document.querySelector('.c-info-3');
@@ -92,74 +102,205 @@ const cInfo4 = document.querySelector('.c-info-4');
 const closeVideo = document.querySelector('.close-video');
 const nav = document.querySelector('nav');
 
-aC1.addEventListener("click", () => {
-    cV1.style.zIndex = "100";
-    cInfo1.style.zIndex = "101";
-    aC1.style.width = "100%";
-    aC2.style.opacity = "0";
-    aC3.style.opacity = "0";
-    aC4.style.opacity = "0";
-    closeVideo.style.opacity = "1";
-    nav.style.transform = "translateY(-100px)"
-})
+if (window.matchMedia("(max-width: 500px)").matches) {
 
-aC2.addEventListener("click", () => {
-    cV2.style.zIndex = "100";
-    cInfo2.style.zIndex = "101";
-    aC2.style.width = "100%";
-    aC1.style.display = "none";
-    aC3.style.opacity = "0";
-    aC4.style.opacity = "0";
-    closeVideo.style.opacity = "1";
-    nav.style.transform = "translateY(-100px)"
-})
+    aC1.addEventListener("click", () => {
+        cV1.style.zIndex = "100";
+        cInfo1.style.zIndex = "101";
+        cInfo1.style.opacity = "1";
+    })
 
-aC3.addEventListener("click", () => {
-    cV3.style.zIndex = "100";
-    cInfo3.style.zIndex = "101";
-    aC3.style.width = "100%";
-    aC1.style.display = "none";
-    aC2.style.display = "none";
-    aC4.style.opacity = "0";
-    closeVideo.style.opacity = "1";
-    nav.style.transform = "translateY(-100px)"
-})
+    aC2.addEventListener("click", () => {
+        cV2.style.zIndex = "100";
+        cInfo2.style.zIndex = "101";
+        cInfo2.style.opacity = "1";
+    })
 
-aC4.addEventListener("click", () => {
-    cV4.style.zIndex = "100";
-    cInfo4.style.zIndex = "101";
-    aC4.style.width = "100%";
-    aC1.style.display = "none";
-    aC2.style.display = "none";
-    aC3.style.display = "none";
-    closeVideo.style.opacity = "1";
-    nav.style.transform = "translateY(-100px)"
-})
+    aC3.addEventListener("click", () => {
+        cV3.style.zIndex = "100";
+        cInfo3.style.zIndex = "101";
+        cInfo3.style.opacity = "1";
+    })
+
+    aC4.addEventListener("click", () => {
+        cV4.style.zIndex = "100";
+        cInfo4.style.zIndex = "101";
+        cInfo4.style.opacity = "1";
+    })
+
+    for (let i = 0; i < cardInfo.length; i++) {
+        cardInfo[i].addEventListener("click", () => {
+            cardInfo[i].style.zIndex = "";
+            cardInfo[i].style.opacity = "";
+
+            for (let i = 0; i < cardVideo.length; i++) {
+                cardVideo[i].style.zIndex = "";
+            }
+        })
+    }
+
+} else {
+
+    let draggableElem = document.querySelectorAll(".card-info");
+    let initialX = 0,
+        initialY = 0;
+    let moveElement = false;
+
+    // Events Ovject 
+    let events = {
+        mouse: {
+            down: "mousedown",
+            move: "mousemove",
+            up: "mouseup",
+        },
+        touch: {
+            down: "touchstart",
+            move: "touchmove",
+            up: "touchend",
+        },
+    };
+
+    let deviceType = "";
+
+    // Detech touch device 
+    const isTouchDevice = () => {
+        try {
+            // We try to create TouchEvent (it would fail for fesktops and throw error) 
+            document.createEvent("TouchEvent");
+            deviceType = "touch";
+            return true;
+        } catch (e) {
+            deviceType = "mouse";
+            return false;
+        }
+    };
+
+    isTouchDevice();
+
+    for (let i = 0; i < draggableElem.length; i++) {
+
+        // Start (mouse down / touch start)
+        draggableElem[i].addEventListener(events[deviceType].down,
+            (e) => {
+                e.preventDefault();
+                // initial x and y points
+                initialX = !isTouchDevice() ? e.clientX : e.touches[0].clientX;
+                initialY = !isTouchDevice() ? e.clientY : e.touches[0].clientY;
+                // Start movement
+                moveElement = true;
+            }
+        );
+
+        // Move
+        draggableElem[i].addEventListener(events[deviceType].move,
+            (e) => {
+                // i movement == true then set top and left to new X and Y while removing any offset
+                if (moveElement) {
+                    e.preventDefault();
+                    let newX = !isTouchDevice() ? e.clientX : e.touches[0].clientX;
+                    let newY = !isTouchDevice() ? e.clientY : e.touches[0].clientY;
+                    draggableElem[i].style.top = draggableElem[i].offsetTop - ((initialY - newY) * 2) + "px";
+                    draggableElem[i].style.left = draggableElem[i].offsetLeft - ((initialX - newX) * 2) + "px";
+                    initialX = newX;
+                    initialY = newY;
+                }
+            }
+        );
+
+        // mouse up / touch end
+        draggableElem[i].addEventListener(events[deviceType].up,
+            (stopMovement = (e) => {
+                moveElement = false;
+            })
+        );
+
+        draggableElem[i].addEventListener("mouseleave", stopMovement);
+        draggableElem[i].addEventListener(events[deviceType].up,
+            (e) => {
+                moveElement = false;
+            }
+        );
+
+    }
+
+    aC1.addEventListener("click", () => {
+        cV1.style.zIndex = "100";
+        cInfo1.style.zIndex = "101";
+        cInfo1.style.opacity = "1";
+        aC1.style.zIndex = "99";
+        aC1.style.width = "100%";
+        aC2.style.opacity = "0";
+        aC3.style.opacity = "0";
+        aC4.style.opacity = "0";
+        closeVideo.style.opacity = "1";
+        nav.style.transform = "translateY(-100px)"
+    })
+
+    aC2.addEventListener("click", () => {
+        cV2.style.zIndex = "100";
+        cInfo2.style.zIndex = "101";
+        cInfo2.style.opacity = "1";
+        aC2.style.zIndex = "99";
+        aC2.style.width = "100%";
+        aC2.style.transform = "translateX(-316px)";
+        aC1.style.opacity = "0";
+        aC3.style.opacity = "0";
+        aC4.style.opacity = "0";
+        closeVideo.style.opacity = "1";
+        nav.style.transform = "translateY(-100px)"
+    })
+
+    aC3.addEventListener("click", () => {
+        cV3.style.zIndex = "100";
+        cInfo3.style.zIndex = "101";
+        cInfo3.style.opacity = "1";
+        aC3.style.zIndex = "99";
+        aC3.style.width = "100%";
+        aC3.style.transform = "translateX(316px)";
+        aC1.style.opacity = "0";
+        aC2.style.opacity = "0";
+        aC4.style.opacity = "0";
+        closeVideo.style.opacity = "1";
+        nav.style.transform = "translateY(-100px)"
+    })
+
+    aC4.addEventListener("click", () => {
+        cV4.style.zIndex = "100";
+        cInfo4.style.zIndex = "101";
+        cInfo4.style.opacity = "1";
+        aC4.style.zIndex = "99";
+        aC4.style.width = "100%";
+        aC1.style.opacity = "0";
+        aC2.style.opacity = "0";
+        aC2.style.opacity = "0";
+        closeVideo.style.opacity = "1";
+        nav.style.transform = "translateY(-100px)"
+    })
+}
 
 closeVideo.addEventListener("click", () => {
-    cV1.style.zIndex = "";
-    cV2.style.zIndex = "";
-    cV3.style.zIndex = "";
-    cV4.style.zIndex = "";
-    cInfo1.style.zIndex = "";
-    cInfo2.style.zIndex = "";
-    cInfo3.style.zIndex = "";
-    cInfo4.style.zIndex = "";
-    aC1.style.width = "";
-    aC2.style.width = "";
-    aC3.style.width = "";
-    aC4.style.width = "";
-    aC1.style.opacity = "1";
-    aC2.style.opacity = "1";
-    aC3.style.opacity = "1";
-    aC4.style.opacity = "1";
-    aC1.style.display = "";
-    aC2.style.display = "";
-    aC3.style.display = "";
-    aC4.style.display = "";
+    for (let i = 0; i < animalsCard.length; i++) {
+        animalsCard[i].style.width = "";
+        animalsCard[i].style.opacity = "1";
+    }
+
+    for (let i = 0; i < cardVideo.length; i++) {
+        cardVideo[i].style.zIndex = "";
+    }
+
+    for (let i = 0; i < cardInfo.length; i++) {
+        cardInfo[i].style.zIndex = "";
+        cardInfo[i].style.opacity = "";
+    }
+
+    aC2.style.transform = "translateX(0px)";
+    aC3.style.transform = "translateX(0px)";
     closeVideo.style.opacity = "0";
-    nav.style.transform = "translateY(0px)"
+    nav.style.transform = "translateY(0px)";
 })
+
+
+
 
 let mm = gsap.matchMedia();
 
@@ -179,7 +320,8 @@ mm.add({
                 end: isMobile ? '84% center' : '95% center',
                 scrub: 1
             }
-        });
+        }
+    );
 
     gsap.fromTo(".pulse", {
         x: isMobile ? 95 : 330
@@ -191,7 +333,8 @@ mm.add({
                 end: isMobile ? '58% center' : '65% center',
                 scrub: 1
             }
-        });
+        }
+    );
 
     gsap.fromTo(".pulse", {
         x: isMobile ? 10 : 23,
@@ -203,7 +346,8 @@ mm.add({
                 end: isMobile ? '28% center' : '35% center',
                 scrub: 1
             }
-        });
+        }
+    );
 
     gsap.fromTo(".pulse", {
         opacity: 0,
@@ -215,7 +359,8 @@ mm.add({
                 end: '22% center',
                 scrub: 1
             }
-        });
+        }
+    );
 
     gsap.to("#header #head-img", {
         scale: 1.5, duration: 15,
@@ -390,5 +535,4 @@ mm.add({
             scrub: 1
         }
     });
-
 })
