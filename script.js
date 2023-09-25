@@ -358,15 +358,6 @@ mm.add({
         }
     });
 
-    gsap.from("#animals", {
-        opacity: 0,
-        scrollTrigger: {
-            start: isMobile ? '18% center' : '23% center',
-            end: isMobile ? '20% center' : '25% center',
-            scrub: 3
-        }
-    });
-
     gsap.fromTo(".draw-line-inner-1", {
         y: -220
     },
