@@ -29,7 +29,7 @@ body {
     width: 100%;
     height: 100vh;
     background-color: #000;
-    animation: bg 6.5s infinite;
+    animation: bg 3s infinite;
 }
 
 @keyframes bg {
@@ -95,6 +95,7 @@ nav {
 .nav-link {
     font-size: 18px;
     letter-spacing: 1.2px;
+    cursor: pointer;
 }
 
 .pulse {
@@ -203,10 +204,15 @@ nav {
     position: relative;
     width: 100%;
     height: 100vh;
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
 }
 
 .animals-card {
     position: absolute;
+    width: 100%;
     height: 100vh;
     border-radius: 0;
     padding: 0px !important;
@@ -216,16 +222,20 @@ nav {
     transition: all 0.6s;
 }
 
+.ac-1 {
+    grid-column: 1/2;
+}
+
 .ac-2 {
-    left: 316px;
+    grid-column: 2/2;
 }
 
 .ac-3 {
-    right: 316px;
+    grid-column: 3/4;
 }
 
 .ac-4 {
-    right: 0;
+    grid-column: 4/4;
 }
 
 .card {
@@ -320,20 +330,30 @@ nav {
     object-fit: cover;
 }
 
-.card-info {
+.c-info-parent {
     width: 320px;
     position: absolute;
-    left: 35%;
+    left: 65%;
     top: 20%;
     z-index: -101;
     height: 50%;
-    padding: 30px;
     cursor: pointer;
+    opacity: 0;
+}
+
+.hide {
+    opacity: 0;
+    z-index: -101;
+}
+
+.card-info {
+    width: 100%;
+    height: 100%;
+    padding: 30px;
     background-color: #000;
     overflow-x: hidden;
     overflow-y: scroll;
     transition: all 0.3s;
-    opacity: 0;
 }
 
 .card-info-img {
@@ -604,11 +624,6 @@ nav {
     height: 100%;
     background-color: hsla(0, 0%, 100%, 0.2);
 }
-
-/* 
-.grid-line.gl-1 {
-    right: 1px;
-} */
 
 .gallery-title {
     position: absolute;
@@ -941,9 +956,8 @@ nav {
     }
 
     .animals-card-group {
-        position: relative;
-        width: 100%;
         height: 100%;
+        display: block;
     }
 
     .animals-card {
@@ -967,10 +981,13 @@ nav {
         font-weight: 600;
     }
 
-    .card-info {
-        left: 15%;
+    .c-info-parent {
+        left: 10%;
         top: 10%;
         height: 83%;
+    }
+
+    .card-info {
         padding: 0 30px 0 30px;
     }
 

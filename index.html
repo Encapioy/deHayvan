@@ -9,28 +9,26 @@
 
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
     <!-- MDB -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="preloader d-flex flex-column justify-content-center align-items-center">
+    <!-- <div class="preloader d-flex flex-column justify-content-center align-items-center">
         <div class="black-bg"></div>
         <div class="counter">0</div>
         <div class="loading d-flex flex-column justify-content-center align-items-center">
             <h1 class="text-white">loading</h1>
             <div class="load-dot"></div>
         </div>
-    </div>
+    </div> -->
     <nav class="navbar navbar-expand-lg shadow-0 sticky-top">
         <div class="container-fluid">
             <div class="navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav d-flex justify-content-around align-items-center w-100 pt-3">
                     <li class="nav-item">
-                        <a class="nav-link text-white mt-2" aria-current="page" href="#header">Plot</a>
+                        <a class="nav-link text-white mt-2" aria-current="page" onclick="scrollToPlot()">Plot</a>
                         <div class="pulse"></div>
                     </li>
                     <li class="nav-item">
@@ -77,34 +75,36 @@
 
     <section id="animals">
         <div class="close-video">Close Video</div>
-        <div class="animals-card-group row">
+        <div class="animals-card-group">
 
-            <div class="animals-card ac-1 col-sm-3 col-12">
-                <div class="card-info c-info-1">
-                    <div class="c-info-mobile-close">
-                        <img src="images/close.png" alt="">
-                    </div>
-                    <div class="c-info-drag">
-                        <img src="images/drag.png" alt="">
-                    </div>
-                    <div class="card-info-img">
-                        <img src="images/mammals.jpg" alt="">
-                    </div>
-                    <div class="card-info-text">
-                        <h2 class="text-white text-capitalize">mammals</h2>
-                        <p class="text-white">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur,
-                            ratione
-                            molestiae mollitia
-                            ut ipsam laboriosam sapiente maiores quas dignissimos fuga odio harum sit asperiores,
-                            labore
-                            nesciunt sunt debitis qui veniam?</p>
+            <div class="animals-card ac-1">
+                <div class="c-info-parent cip-1">
+                    <div class="card-info c-info-1">
+                        <div class="c-info-mobile-close">
+                            <img src="images/close.png" alt="">
+                        </div>
+                        <div class="c-info-drag">
+                            <img src="images/drag.png" alt="">
+                        </div>
+                        <div class="card-info-img">
+                            <img src="images/mammals.jpg" alt="">
+                        </div>
+                        <div class="card-info-text">
+                            <h2 class="text-white text-capitalize">mammals</h2>
+                            <p class="text-white">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur,
+                                ratione
+                                molestiae mollitia
+                                ut ipsam laboriosam sapiente maiores quas dignissimos fuga odio harum sit asperiores,
+                                labore
+                                nesciunt sunt debitis qui veniam?</p>
 
-                        <p class="text-muted">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur,
-                            ratione
-                            molestiae mollitia
-                            ut ipsam laboriosam sapiente maiores quas dignissimos fuga odio harum sit asperiores,
-                            labore
-                            nesciunt sunt debitis qui veniam?</p>
+                            <p class="text-muted">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur,
+                                ratione
+                                molestiae mollitia
+                                ut ipsam laboriosam sapiente maiores quas dignissimos fuga odio harum sit asperiores,
+                                labore
+                                nesciunt sunt debitis qui veniam?</p>
+                        </div>
                     </div>
                 </div>
                 <div class="card">
@@ -121,28 +121,36 @@
                 </div>
             </div>
 
-            <div class="animals-card ac-2 col-sm-3 col-12">
-                <div class="card-info c-info-2">
-                    <div class="card-info-img">
-                        <img src="images/reptile.jpg" alt="">
-                    </div>
-                    <div class="card-info-text">
-                        <h2 class="text-white text-capitalize">reptile</h2>
-                        <p class="text-white">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur,
-                            ratione
-                            molestiae
-                            mollitia
-                            ut ipsam laboriosam sapiente maiores quas dignissimos fuga odio harum sit asperiores,
-                            labore
-                            nesciunt sunt debitis qui veniam?</p>
+            <div class="animals-card ac-2">
+                <div class="c-info-parent cip-2">
+                    <div class="card-info c-info-2">
+                        <div class="c-info-mobile-close">
+                            <img src="images/close.png" alt="">
+                        </div>
+                        <div class="c-info-drag">
+                            <img src="images/drag.png" alt="">
+                        </div>
+                        <div class="card-info-img">
+                            <img src="images/reptile.jpg" alt="">
+                        </div>
+                        <div class="card-info-text">
+                            <h2 class="text-white text-capitalize">reptile</h2>
+                            <p class="text-white">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur,
+                                ratione
+                                molestiae
+                                mollitia
+                                ut ipsam laboriosam sapiente maiores quas dignissimos fuga odio harum sit asperiores,
+                                labore
+                                nesciunt sunt debitis qui veniam?</p>
 
-                        <p class="text-muted">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur,
-                            ratione
-                            molestiae
-                            mollitia
-                            ut ipsam laboriosam sapiente maiores quas dignissimos fuga odio harum sit asperiores,
-                            labore
-                            nesciunt sunt debitis qui veniam?</p>
+                            <p class="text-muted">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur,
+                                ratione
+                                molestiae
+                                mollitia
+                                ut ipsam laboriosam sapiente maiores quas dignissimos fuga odio harum sit asperiores,
+                                labore
+                                nesciunt sunt debitis qui veniam?</p>
+                        </div>
                     </div>
                 </div>
                 <div class="card">
@@ -160,28 +168,36 @@
                 </div>
             </div>
 
-            <div class="animals-card ac-3 col-sm-3 col-12">
-                <div class="card-info c-info-3">
-                    <div class="card-info-img">
-                        <img src="images/poultry.jpg" alt="">
-                    </div>
-                    <div class="card-info-text">
-                        <h2 class="text-white text-capitalize">poultry</h2>
-                        <p class="text-white">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur,
-                            ratione
-                            molestiae
-                            mollitia
-                            ut ipsam laboriosam sapiente maiores quas dignissimos fuga odio harum sit asperiores,
-                            labore
-                            nesciunt sunt debitis qui veniam?</p>
+            <div class="animals-card ac-3">
+                <div class="c-info-parent cip-3">
+                    <div class="card-info c-info-3">
+                        <div class="c-info-mobile-close">
+                            <img src="images/close.png" alt="">
+                        </div>
+                        <div class="c-info-drag">
+                            <img src="images/drag.png" alt="">
+                        </div>
+                        <div class="card-info-img">
+                            <img src="images/poultry.jpg" alt="">
+                        </div>
+                        <div class="card-info-text">
+                            <h2 class="text-white text-capitalize">poultry</h2>
+                            <p class="text-white">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur,
+                                ratione
+                                molestiae
+                                mollitia
+                                ut ipsam laboriosam sapiente maiores quas dignissimos fuga odio harum sit asperiores,
+                                labore
+                                nesciunt sunt debitis qui veniam?</p>
 
-                        <p class="text-muted">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur,
-                            ratione
-                            molestiae
-                            mollitia
-                            ut ipsam laboriosam sapiente maiores quas dignissimos fuga odio harum sit asperiores,
-                            labore
-                            nesciunt sunt debitis qui veniam?</p>
+                            <p class="text-muted">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur,
+                                ratione
+                                molestiae
+                                mollitia
+                                ut ipsam laboriosam sapiente maiores quas dignissimos fuga odio harum sit asperiores,
+                                labore
+                                nesciunt sunt debitis qui veniam?</p>
+                        </div>
                     </div>
                 </div>
                 <div class="card">
@@ -199,28 +215,36 @@
                 </div>
             </div>
 
-            <div class="animals-card ac-4 col-sm-3 col-12">
-                <div class="card-info c-info-4">
-                    <div class="card-info-img">
-                        <img src="images/amphibia.jpg" alt="">
-                    </div>
-                    <div class="card-info-text">
-                        <h2 class="text-white text-capitalize">amphibia</h2>
-                        <p class="text-white">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur,
-                            ratione
-                            molestiae
-                            mollitia
-                            ut ipsam laboriosam sapiente maiores quas dignissimos fuga odio harum sit asperiores,
-                            labore
-                            nesciunt sunt debitis qui veniam?</p>
+            <div class="animals-card ac-4">
+                <div class="c-info-parent cip-4">
+                    <div class="card-info c-info-4">
+                        <div class="c-info-mobile-close">
+                            <img src="images/close.png" alt="">
+                        </div>
+                        <div class="c-info-drag">
+                            <img src="images/drag.png" alt="">
+                        </div>
+                        <div class="card-info-img">
+                            <img src="images/amphibia.jpg" alt="">
+                        </div>
+                        <div class="card-info-text">
+                            <h2 class="text-white text-capitalize">amphibia</h2>
+                            <p class="text-white">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur,
+                                ratione
+                                molestiae
+                                mollitia
+                                ut ipsam laboriosam sapiente maiores quas dignissimos fuga odio harum sit asperiores,
+                                labore
+                                nesciunt sunt debitis qui veniam?</p>
 
-                        <p class="text-muted">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur,
-                            ratione
-                            molestiae
-                            mollitia
-                            ut ipsam laboriosam sapiente maiores quas dignissimos fuga odio harum sit asperiores,
-                            labore
-                            nesciunt sunt debitis qui veniam?</p>
+                            <p class="text-muted">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur,
+                                ratione
+                                molestiae
+                                mollitia
+                                ut ipsam laboriosam sapiente maiores quas dignissimos fuga odio harum sit asperiores,
+                                labore
+                                nesciunt sunt debitis qui veniam?</p>
+                        </div>
                     </div>
                 </div>
                 <div class="card">
@@ -237,6 +261,7 @@
                     </div>
                 </div>
             </div>
+
         </div>
     </section>
 
@@ -387,7 +412,7 @@
         <div class="footer-title text-center text-white">
             <p>Share this experience</p>
             <h1>deHayvan.rf.gd</h1>
-            <a onclick="scrollToTop()">Back to top</a>
+            <a class="back-top" onclick="scrollToTop()">Back to top</a>
         </div>
         <div class="footer-bottom text-center text-uppercase">
             created by muhammad fidiansyah - dehayvan
@@ -403,6 +428,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"
         integrity="sha512-AMl4wfwAmDM1lsQvVBBRHYENn1FR8cfOTpt8QVbb/P55mYOdahHD4LmHM1W55pNe3j/3od8ELzPf/8eNkkjISQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/Draggable.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="script.js"></script>
 </body>

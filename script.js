@@ -1,7 +1,4 @@
-function scrollToTop() {
-    window.scrollTo(0, 0);
-}
-
+// Preloader
 function counter() {
     var count = setInterval(function () {
         var c = parseInt($('.counter').text());
@@ -10,10 +7,165 @@ function counter() {
             clearInterval(count);
             $('.preloader').addClass('active')
         }
-    }, 60)
+    }, 20)
 }
 counter()
 
+// Animals Section
+const animalsCard = document.querySelectorAll('.animals-card');
+const aC1 = document.querySelector('.ac-1');
+const aC2 = document.querySelector('.ac-2');
+const aC3 = document.querySelector('.ac-3');
+const aC4 = document.querySelector('.ac-4');
+const cardVideo = document.querySelectorAll('.card-video');
+const cV1 = document.querySelector('.cv-1');
+const cV2 = document.querySelector('.cv-2');
+const cV3 = document.querySelector('.cv-3');
+const cV4 = document.querySelector('.cv-4');
+const cardInfo = document.querySelectorAll('.card-info');
+const cInfo1 = document.querySelector('.c-info-1');
+const cInfo2 = document.querySelector('.c-info-2');
+const cInfo3 = document.querySelector('.c-info-3');
+const cInfo4 = document.querySelector('.c-info-4');
+const cInfoParent = document.querySelectorAll('.c-info-parent');
+const cip1 = document.querySelector('.cip-1');
+const cip2 = document.querySelector('.cip-2');
+const cip3 = document.querySelector('.cip-3');
+const cip4 = document.querySelector('.cip-4');
+const closeVideo = document.querySelector('.close-video');
+const nav = document.querySelector('nav');
+
+if (window.matchMedia("(max-width: 500px)").matches) {
+
+    // Scroll To Plot (Mobile Version)
+    function scrollToPlot() {
+        window.scrollTo(0, 400);
+    }
+
+    // Animals Card click (Mobile Version)
+    aC1.addEventListener("click", () => {
+        cV1.style.zIndex = "100";
+        cip1.style.zIndex = "101";
+        cip1.style.opacity = "1";
+    })
+
+    aC2.addEventListener("click", () => {
+        cV2.style.zIndex = "100";
+        cip2.style.zIndex = "101";
+        cip2.style.opacity = "1";
+    })
+
+    aC3.addEventListener("click", () => {
+        cV3.style.zIndex = "100";
+        cip3.style.zIndex = "101";
+        cip3.style.opacity = "1";
+    })
+
+    aC4.addEventListener("click", () => {
+        cV4.style.zIndex = "100";
+        cip4.style.zIndex = "101";
+        cip4.style.opacity = "1";
+    })
+
+} else {
+    // Scroll To Plot
+    function scrollToPlot() {
+        window.scrollTo(0, 300);
+    }
+
+    // Draggable Card Info
+    const container1 = document.querySelector(".ac-1");
+    const container2 = document.querySelector(".ac-2");
+    const container3 = document.querySelector(".ac-3");
+    const container4 = document.querySelector(".ac-4");
+    Draggable.create(".cip-1", {
+        bounds: container1
+    });
+    Draggable.create(".cip-2", {
+        bounds: container2
+    });
+    Draggable.create(".cip-3", {
+        bounds: container3
+    });
+    Draggable.create(".cip-4", {
+        bounds: container4
+    });
+
+    // Animals Card click (Dekstop Version)
+    aC1.addEventListener("click", () => {
+        cV1.style.zIndex = "100";
+        cip1.style.zIndex = "101";
+        cip1.style.opacity = "1";
+        aC1.style.zIndex = "99";
+        aC1.style.gridColumn = "1/6";
+        aC2.style.opacity = "0";
+        aC3.style.opacity = "0";
+        aC4.style.opacity = "0";
+        closeVideo.style.opacity = "1";
+        nav.style.transform = "translateY(-100px)"
+    })
+
+    aC2.addEventListener("click", () => {
+        cV2.style.zIndex = "100";
+        cip2.style.zIndex = "101";
+        cip2.style.opacity = "1";
+        aC2.style.zIndex = "99";
+        aC2.style.gridColumn = "1/6";
+        aC1.style.opacity = "0";
+        aC3.style.opacity = "0";
+        aC4.style.opacity = "0";
+        closeVideo.style.opacity = "1";
+        nav.style.transform = "translateY(-100px)"
+    })
+
+    aC3.addEventListener("click", () => {
+        cV3.style.zIndex = "100";
+        cip3.style.zIndex = "101";
+        cip3.style.opacity = "1";
+        aC3.style.zIndex = "99";
+        aC3.style.gridColumn = "1/6";
+        aC1.style.opacity = "0";
+        aC2.style.opacity = "0";
+        aC4.style.opacity = "0";
+        closeVideo.style.opacity = "1";
+        nav.style.transform = "translateY(-100px)"
+    })
+
+    aC4.addEventListener("click", () => {
+        cV4.style.zIndex = "100";
+        cip4.style.zIndex = "101";
+        cip4.style.opacity = "1";
+        aC4.style.zIndex = "99";
+        aC4.style.gridColumn = "1/6";
+        aC1.style.opacity = "0";
+        aC2.style.opacity = "0";
+        aC2.style.opacity = "0";
+        closeVideo.style.opacity = "1";
+        nav.style.transform = "translateY(-100px)"
+    })
+}
+
+// Close Video
+closeVideo.addEventListener("click", () => {
+    for (let i = 0; i < animalsCard.length; i++) {
+        animalsCard[i].style.gridColumn = "";
+        animalsCard[i].style.opacity = "1";
+    }
+
+    for (let i = 0; i < cardVideo.length; i++) {
+        cardVideo[i].style.zIndex = "";
+    }
+
+    for (let i = 0; i < cInfoParent.length; i++) {
+        cInfoParent[i].style.zIndex = "";
+        cInfoParent[i].style.opacity = "";
+    }
+
+    closeVideo.style.opacity = "0";
+    nav.style.transform = "translateY(0px)";
+})
+
+// Credit Section
 const cardFlex = document.querySelector(".card-flex");
 const layer = document.querySelector(".layer");
 
@@ -28,6 +180,7 @@ function parallax(e) {
     });
 }
 
+// Gallery Section
 const gClose = document.querySelector(".g-close");
 const titleParent = document.querySelector(".title-parent");
 const closeGallery = document.querySelector(".close-gallery");
@@ -83,225 +236,14 @@ gImg9.style.transform = "scale(0.2, 0.2)";
 gImg10.style.transform = "translateY(-80px)";
 gImg11.style.transform = "scale(0.6)";
 
-
-const animalsCard = document.querySelectorAll('.animals-card');
-const aC1 = document.querySelector('.ac-1');
-const aC2 = document.querySelector('.ac-2');
-const aC3 = document.querySelector('.ac-3');
-const aC4 = document.querySelector('.ac-4');
-const cardVideo = document.querySelectorAll('.card-video');
-const cV1 = document.querySelector('.cv-1');
-const cV2 = document.querySelector('.cv-2');
-const cV3 = document.querySelector('.cv-3');
-const cV4 = document.querySelector('.cv-4');
-const cardInfo = document.querySelectorAll('.card-info');
-const cInfo1 = document.querySelector('.c-info-1');
-const cInfo2 = document.querySelector('.c-info-2');
-const cInfo3 = document.querySelector('.c-info-3');
-const cInfo4 = document.querySelector('.c-info-4');
-const closeVideo = document.querySelector('.close-video');
-const nav = document.querySelector('nav');
-
-if (window.matchMedia("(max-width: 500px)").matches) {
-
-    aC1.addEventListener("click", () => {
-        cV1.style.zIndex = "100";
-        cInfo1.style.zIndex = "101";
-        cInfo1.style.opacity = "1";
-    })
-
-    aC2.addEventListener("click", () => {
-        cV2.style.zIndex = "100";
-        cInfo2.style.zIndex = "101";
-        cInfo2.style.opacity = "1";
-    })
-
-    aC3.addEventListener("click", () => {
-        cV3.style.zIndex = "100";
-        cInfo3.style.zIndex = "101";
-        cInfo3.style.opacity = "1";
-    })
-
-    aC4.addEventListener("click", () => {
-        cV4.style.zIndex = "100";
-        cInfo4.style.zIndex = "101";
-        cInfo4.style.opacity = "1";
-    })
-
-    for (let i = 0; i < cardInfo.length; i++) {
-        cardInfo[i].addEventListener("click", () => {
-            cardInfo[i].style.zIndex = "";
-            cardInfo[i].style.opacity = "";
-
-            for (let i = 0; i < cardVideo.length; i++) {
-                cardVideo[i].style.zIndex = "";
-            }
-        })
-    }
-
-} else {
-
-    let draggableElem = document.querySelectorAll(".card-info");
-    let initialX = 0,
-        initialY = 0;
-    let moveElement = false;
-
-    // Events Ovject 
-    let events = {
-        mouse: {
-            down: "mousedown",
-            move: "mousemove",
-            up: "mouseup",
-        },
-        touch: {
-            down: "touchstart",
-            move: "touchmove",
-            up: "touchend",
-        },
-    };
-
-    let deviceType = "";
-
-    // Detech touch device 
-    const isTouchDevice = () => {
-        try {
-            // We try to create TouchEvent (it would fail for fesktops and throw error) 
-            document.createEvent("TouchEvent");
-            deviceType = "touch";
-            return true;
-        } catch (e) {
-            deviceType = "mouse";
-            return false;
-        }
-    };
-
-    isTouchDevice();
-
-    for (let i = 0; i < draggableElem.length; i++) {
-
-        // Start (mouse down / touch start)
-        draggableElem[i].addEventListener(events[deviceType].down,
-            (e) => {
-                e.preventDefault();
-                // initial x and y points
-                initialX = !isTouchDevice() ? e.clientX : e.touches[0].clientX;
-                initialY = !isTouchDevice() ? e.clientY : e.touches[0].clientY;
-                // Start movement
-                moveElement = true;
-            }
-        );
-
-        // Move
-        draggableElem[i].addEventListener(events[deviceType].move,
-            (e) => {
-                // i movement == true then set top and left to new X and Y while removing any offset
-                if (moveElement) {
-                    e.preventDefault();
-                    let newX = !isTouchDevice() ? e.clientX : e.touches[0].clientX;
-                    let newY = !isTouchDevice() ? e.clientY : e.touches[0].clientY;
-                    draggableElem[i].style.top = draggableElem[i].offsetTop - ((initialY - newY) * 2) + "px";
-                    draggableElem[i].style.left = draggableElem[i].offsetLeft - ((initialX - newX) * 2) + "px";
-                    initialX = newX;
-                    initialY = newY;
-                }
-            }
-        );
-
-        // mouse up / touch end
-        draggableElem[i].addEventListener(events[deviceType].up,
-            (stopMovement = (e) => {
-                moveElement = false;
-            })
-        );
-
-        draggableElem[i].addEventListener("mouseleave", stopMovement);
-        draggableElem[i].addEventListener(events[deviceType].up,
-            (e) => {
-                moveElement = false;
-            }
-        );
-
-    }
-
-    aC1.addEventListener("click", () => {
-        cV1.style.zIndex = "100";
-        cInfo1.style.zIndex = "101";
-        cInfo1.style.opacity = "1";
-        aC1.style.zIndex = "99";
-        aC1.style.width = "100%";
-        aC2.style.opacity = "0";
-        aC3.style.opacity = "0";
-        aC4.style.opacity = "0";
-        closeVideo.style.opacity = "1";
-        nav.style.transform = "translateY(-100px)"
-    })
-
-    aC2.addEventListener("click", () => {
-        cV2.style.zIndex = "100";
-        cInfo2.style.zIndex = "101";
-        cInfo2.style.opacity = "1";
-        aC2.style.zIndex = "99";
-        aC2.style.width = "100%";
-        aC2.style.transform = "translateX(-316px)";
-        aC1.style.opacity = "0";
-        aC3.style.opacity = "0";
-        aC4.style.opacity = "0";
-        closeVideo.style.opacity = "1";
-        nav.style.transform = "translateY(-100px)"
-    })
-
-    aC3.addEventListener("click", () => {
-        cV3.style.zIndex = "100";
-        cInfo3.style.zIndex = "101";
-        cInfo3.style.opacity = "1";
-        aC3.style.zIndex = "99";
-        aC3.style.width = "100%";
-        aC3.style.transform = "translateX(316px)";
-        aC1.style.opacity = "0";
-        aC2.style.opacity = "0";
-        aC4.style.opacity = "0";
-        closeVideo.style.opacity = "1";
-        nav.style.transform = "translateY(-100px)"
-    })
-
-    aC4.addEventListener("click", () => {
-        cV4.style.zIndex = "100";
-        cInfo4.style.zIndex = "101";
-        cInfo4.style.opacity = "1";
-        aC4.style.zIndex = "99";
-        aC4.style.width = "100%";
-        aC1.style.opacity = "0";
-        aC2.style.opacity = "0";
-        aC2.style.opacity = "0";
-        closeVideo.style.opacity = "1";
-        nav.style.transform = "translateY(-100px)"
-    })
+// Back To Top
+function scrollToTop() {
+    window.scrollTo(0, 0);
 }
 
-closeVideo.addEventListener("click", () => {
-    for (let i = 0; i < animalsCard.length; i++) {
-        animalsCard[i].style.width = "";
-        animalsCard[i].style.opacity = "1";
-    }
-
-    for (let i = 0; i < cardVideo.length; i++) {
-        cardVideo[i].style.zIndex = "";
-    }
-
-    for (let i = 0; i < cardInfo.length; i++) {
-        cardInfo[i].style.zIndex = "";
-        cardInfo[i].style.opacity = "";
-    }
-
-    aC2.style.transform = "translateX(0px)";
-    aC3.style.transform = "translateX(0px)";
-    closeVideo.style.opacity = "0";
-    nav.style.transform = "translateY(0px)";
-})
 
 
-
-
+// Animation On Scroll
 let mm = gsap.matchMedia();
 
 mm.add({
@@ -530,8 +472,8 @@ mm.add({
     gsap.from(".back-top", {
         y: 30,
         scrollTrigger: {
-            start: '88% center',
-            end: '90% center',
+            start: isMobile ? '90% center' : '88% center',
+            end: isMobile ? '92% center' : '90% center',
             scrub: 1
         }
     });
