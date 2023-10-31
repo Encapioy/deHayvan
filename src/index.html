@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.3.67/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="/dist/output.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- preloader start -->
+
+    <!-- <div
+        class="fixed top-0 w-full h-screen bg-neutral-900 z-50 overflow-y-hidden flex flex-col justify-center items-center preloader">
+        <div class="absolute w-full h-screen bg-black animate-loader"></div>
+        <div class="relative text-white text-[16em] font-extralight after:content-['%'] after:text-[0.5em] lg:hidden counter">0
+        </div>
+        <div class="flex flex-col justify-center items-center">
+            <h1 class="text-[2em] z-10 text-white">loading</h1>
+            <div class="relative w-2 h-2 mt-1.5 rounded-full bg-white animate-dot"></div>
+        </div>
+    </div> -->
+
+    <!-- preloader end  -->
+
+    <!-- floating contact start  -->
+
+    <div
+        class="fixed top-1/2 right-0 -translate-y-1/2 h-40 bg-slate-200 overflow-hidden flex flex-col justify-center items-center z-50 shadow-inner px-4 py-2">
+        <a href="" class="text-2xl no-underline">
+            <span class="mdi mdi-facebook"></span>
+        </a>
+        <a href="" class="text-2xl no-underline">
+            <span class="mdi mdi-whatsapp"></span>
+        </a>
+        <a href="" class="text-2xl no-underline">
+            <span class="mdi mdi-instagram"></span>
+        </a>
+        <a href="" class="text-2xl no-underline">
+            <span class="mdi mdi-twitter"></span>
+        </a>
+    </div>
+    <!-- floating contact end  -->
+
+    <!-- floating song start  -->
+    <div class="hidden lg:block">
+        <div
+            class="fixed bottom-12 right-16 w-9 h-9 rounded-full bg-black z-50 flex flex-col justify-center items-center overflow-hidden p-2 cursor-pointer song">
+            <span class="text-white text-xl duration-300 translate-y-3.5 mdi mdi-volume-high object-cover"></span>
+            <span class="text-white text-xl duration-300 translate-y-3.5 mdi mdi-volume-high object-cover"></span>
+        </div>
+        <div
+            class="fixed bottom-28 right-16 w-64 h-40 z-50 overflow-hidden rounded-lg translate-x-80 duration-300 song-frame">
+            <iframe width="100%" height="100%" scrolling="no" frameborder="no" allow="autoplay"
+                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1558051525&color=%23000000&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+            <div
+                style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
+                <a href="https://soundcloud.com/jefrina-haynes-585741467" title="Jefrina Haynes" target="_blank"
+                    style="color: #cccccc; text-decoration: none;">Jefrina Haynes</a> · <a
+                    href="https://soundcloud.com/jefrina-haynes-585741467/when-i-was-young" title="When I Was Young"
+                    target="_blank" style="color: #cccccc; text-decoration: none;">When I Was Young</a>
+            </div>
+        </div>
+    </div>
+    <!-- floating song end  -->
+
+    <!-- header start  -->
+
+    <header class="fixed inset-x-0 top-0 z-50 scroll-smooth">
+        <nav class="flex items-center justify-center p-6 px-8 w-full transition-all duration-300" aria-label="Global">
+            <ul class="flex gap-x-10 lg:gap-x-64 text-lg text-white">
+                <li>
+                    <a onclick="scrollToPlot()" class="text-xs lg:text-lg cursor-pointer tracking-[1.2px]">Plot</a>
+                    <div class="relative z-40 w-1.5 h-1.5 mt-1.5 rounded-full bg-white pulse"></div>
+                </li>
+                <li>
+                    <a href="#animals" class="text-xs lg:text-lg cursor-pointer tracking-[1.2px]">Animals</a>
+                </li>
+                <li>
+                    <a href="#credit" class="text-xs lg:text-lg cursor-pointer tracking-[1.2px]">Credit</a>
+                </li>
+                <li>
+                    <a href="#gallery" class="text-xs lg:text-lg cursor-pointer tracking-[1.2px]">Gallery</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="header"
+        class="relative w-full h-screen p-[30px] lg:p-24 flex justify-center items-center overflow-hidden">
+        <img src="../public/../public/images/header.jpg" id="head-img"
+            class="absolute top-0 left-0 object-cover pointer-events-none w-full h-full">
+        <div class="w-full lg:w-2/5 p-2.5 lg:p-0 header-title text-white">
+            <div class="absolute text-center header-before">
+                <p class="text-2xl lg:text-5xl font-semibold capitalize font-moon upper-text">the article of</p>
+                <div class="-mt-3.5 lg:-mt-9 uppercase flex deHayvan">
+                    <p class="text-[30px] lg:text-5xl font-semibold mt-5">de'</p>
+                    <h2 class="text-[70px] lg:text-[90px]">Hayvan</h2>
+                </div>
+            </div>
+            <div class="header-after text-center">
+                <div class="header-after-text">
+                    <h1 class="capitalize font-medium">plot</h1>
+                    <p class="font-light text-[#ffffffcf]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam
+                        neque, possimus sed,
+                        repellendus
+                        aliquid
+                        corporis quam magnam asperiores iusto quas mollitia consectetur quos autem iste
+                        corrupti
+                        enim dolor
+                        velit cupiditate.</p>
+                </div>
+                <div
+                    class="absolute left-1/2 top-auto right-auto bottom-[50px] overflow-hidden w-px h-[220px] draw-line-1">
+                    <div class="w-px h-full bg-[#ffffff99] draw-line-inner-1"></div>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-7 left-1/2 -translate-x-1/2 flex flex-col justify-center items-center mouse">
+            <div class="w-0.5 h-1.5 bg-white animate-mouse"></div>
+            <div class="w-4 h-8 rounded-full bg-transparent outline outline-[1.5px] outline-white"></div>
+        </div>
+    </section>
+    <!-- header end  -->
+
+    <!-- animals start  -->
+
+    <section id="animals" class="relative w-full h-full lg:h-screen">
+        <div
+            class="hidden lg:block absolute top-10 right-8 z-[100] py-1.5 px-2 bg-black text-white text-xs cursor-pointer opacity-0 transition-all duration-300 close-video">
+            Close Video</div>
+        <div class="relative w-full h-full lg:h-screen grid grid-cols-4 animals-card-group">
+
+            <div
+                class="relative lg:absolute w-full h-[400px] lg:h-screen rounded-none p-0 overflow-hidden brightness-100 lg:brightness-50 transition-all duration-500 col-span-4 lg:col-[1/2] hover:brightness-100 animals-card ac-1">
+                <div
+                    class="absolute w-80 h-5/6 lg:h-1/2 cursor-pointer opacity-0 left-[10%] lg:left-1/2 top-[10%] lg:top-1/4 -z-[101] c-info-parent cip-1">
+                    <div
+                        class="w-full h-full px-[30px] lg:p-8 bg-black overflow-x-hidden overflow-y-scroll transition-all duration-300 card-info c-info-1">
+                        <div
+                            class="absolute top-5 rigt-5 w-6 h-6 cursor-pointer z-[100] opacity-100 lg:opacity-0 c-info-mobile-close">
+                            <img src="../public/images/close.png" class="w-full h-full object-cover" alt="">
+                        </div>
+                        <div class="absolute top-5 right-5 w-6 h-6 cursor-pointer z-[100] opacity-0 lg:opacity-100">
+                            <img src="../public/images/drag.png" class="w-full h-full object-cover" alt="">
+                        </div>
+                        <div class="h-40 mt-[50px] lg:mt-5 mx-0 mb-8 card-info-img">
+                            <img src="../public/images/mammals.jpg" class="object-cover w-full h-full" alt="">
+                        </div>
+                        <div class="card-info-text">
+                            <h2 class="text-white capitalize font-bold text-[40px]">mammals</h2>
+                            <p class="text-white">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur,
+                                ratione
+                                molestiae mollitia
+                                ut ipsam laboriosam sapiente maiores quas dignissimos fuga odio harum sit asperiores,
+                                labore
+                                nesciunt sunt debitis qui veniam?</p>
+
+                            <p class="text-muted">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur,
+                                ratione
+                                molestiae mollitia
+                                ut ipsam laboriosam sapiente maiores quas dignissimos fuga odio harum sit asperiores,
+                                labore
+                                nesciunt sunt debitis qui veniam?</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative h-[400px] lg:h-screen rounded-none p-0 overflow-hidden card">
+                    <img src="../public/images/mammals.jpg"
+                        class="transition-all duration-200 ease-in object-cover w-full h-full"></img>
+                    <div
+                        class="absolute text-white bottom-0 w-full h-2/5 lg:h-1/4 pt-5 pe-5 pb-0 ps-10 box-border translate-y-2.5 lg:translate-y-[100px] opacity-100 lg:opacity-0 origin-bottom transition-all duration-300 card__content">
+                        <p class="m-0 uppercase text-2xl font-semibold lg:font-bold">mammals</p>
+                        <a href="" class="no-underline text-white my-2">
+                            more info <span class="mdi mdi-arrow-right-thin"></span>
+                        </a>
+                    </div>
+                    <div class="overflow-hidden absolute min-w-full min-h-full card-video cv-1">
+                        <video autoplay loop muted src="../public/video/animals-1.mp4"
+                            class="bg-cover absolute m-0 min-w-full min-h-full -z-[100]"></video>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="relative lg:absolute w-full h-[400px] lg:h-screen rounded-none p-0 overflow-hidden brightness-100 lg:brightness-50 transition-all duration-500 col-span-4 lg:col-[2/2] hover:brightness-100 animals-card ac-2">
+                <div
+                    class="absolute w-80 h-5/6 lg:h-1/2 cursor-pointer opacity-0 left-[10%] lg:left-1/2 top-[10%] lg:top-1/4 -z-[101] c-info-parent cip-2">
+                    <div
+                        class="w-full h-full px-[30px] lg:p-8 bg-black overflow-x-hidden overflow-y-scroll transition-all duration-300 card-info c-info-2">
+                        <div
+                            class="absolute top-5 rigt-5 w-6 h-6 cursor-pointer z-[100] opacity-100 lg:opacity-0 c-info-mobile-close">
+                            <img src="../public/images/close.png" class="w-full h-full object-cover" alt="">
+                        </div>
+                        <div class="absolute top-5 right-5 w-6 h-6 cursor-pointer z-[100] opacity-0 lg:opacity-100">
+                            <img src="../public/images/drag.png" class="w-full h-full object-cover" alt="">
+                        </div>
+                        <div class="h-40 mt-[50px] lg:mt-5 mx-0 mb-8 card-info-img">
+                            <img src="../public/images/reptile.jpg" class="object-cover w-full h-full" alt="">
+                        </div>
+                        <div class="card-info-text">
+                            <h2 class="text-white capitalize font-bold text-[40px]">reptile</h2>
+                            <p class="text-white">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur,
+                                ratione
+                                molestiae
+                                mollitia
+                                ut ipsam laboriosam sapiente maiores quas dignissimos fuga odio harum sit asperiores,
+                                labore
+                                nesciunt sunt debitis qui veniam?</p>
+
+                            <p class="text-muted">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur,
+                                ratione
+                                molestiae
+                                mollitia
+                                ut ipsam laboriosam sapiente maiores quas dignissimos fuga odio harum sit asperiores,
+                                labore
+                                nesciunt sunt debitis qui veniam?</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="h-[400px] lg:h-screen rounded-none p-0 overflow-hidden card">
+                    <img src="../public/images/reptile.jpg"
+                        class="transition-all duration-200 ease-in object-cover w-full h-full"></img>
+                    <div
+                        class="absolute text-white bottom-0 w-full h-2/5 lg:h-1/4 pt-5 pe-5 pb-0 ps-10 box-border translate-y-2.5 lg:translate-y-[100px] opacity-100 lg:opacity-0 origin-bottom transition-all duration-300 card__content">
+                        <p class="m-0 uppercase text-2xl font-bold">reptile</p>
+                        <a href="" class="no-underline text-white my-2">
+                            more info <span class="mdi mdi-arrow-right-thin"></span>
+                        </a>
+                        </p>
+                    </div>
+                    <div class="overflow-hidden absolute min-w-full min-h-full card-video cv-2">
+                        <video autoplay loop muted src="../public/video/animals-2.mp4"
+                            class="bg-cover absolute m-0 min-w-full min-h-full -z-[100]"></video>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="relative lg:absolute w-full h-[400px] lg:h-screen rounded-none p-0 overflow-hidden brightness-100 lg:brightness-50 transition-all duration-500 col-span-4 lg:col-[3/4] hover:brightness-100 animals-card ac-3">
+                <div
+                    class="absolute w-80 h-5/6 lg:h-1/2 cursor-pointer opacity-0 left-[10%] lg:left-1/2 top-[10%] lg:top-1/4 -z-[101] c-info-parent cip-3">
+                    <div
+                        class="w-full h-full px-[30px] lg:p-8 bg-black overflow-x-hidden overflow-y-scroll transition-all duration-300 card-info c-info-3">
+                        <div
+                            class="absolute top-5 rigt-5 w-6 h-6 cursor-pointer z-[100] opacity-100 lg:opacity-0 c-info-mobile-close">
+                            <img src="../public/images/close.png" class="w-full h-full object-cover" alt="">
+                        </div>
+                        <div class="absolute top-5 right-5 w-6 h-6 cursor-pointer z-[100] opacity-0 lg:opacity-100">
+                            <img src="../public/images/drag.png" class="w-full h-full object-cover" alt="">
+                        </div>
+                        <div class="h-40 mt-[50px] lg:mt-5 mx-0 mb-8 card-info-img">
+                            <img src="../public/images/poultry.jpg" class="object-cover w-full h-full" alt="">
+                        </div>
+                        <div class="card-info-text">
+                            <h2 class="text-white capitalize font-bold text-[40px]">poultry</h2>
+                            <p class="text-white">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur,
+                                ratione
+                                molestiae
+                                mollitia
+                                ut ipsam laboriosam sapiente maiores quas dignissimos fuga odio harum sit asperiores,
+                                labore
+                                nesciunt sunt debitis qui veniam?</p>
+
+                            <p class="text-muted">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur,
+                                ratione
+                                molestiae
+                                mollitia
+                                ut ipsam laboriosam sapiente maiores quas dignissimos fuga odio harum sit asperiores,
+                                labore
+                                nesciunt sunt debitis qui veniam?</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="h-[400px] lg:h-screen rounded-none p-0 overflow-hidden card">
+                    <img src="../public/images/poultry.jpg"
+                        class="transition-all duration-200 ease-in object-cover w-full h-full"></img>
+                    <div
+                        class="absolute text-white bottom-0 w-full h-2/5 lg:h-1/4 pt-5 pe-5 pb-0 ps-10 box-border translate-y-2.5 lg:translate-y-[100px] opacity-100 lg:opacity-0 origin-bottom transition-all duration-300 card__content">
+                        <p class="m-0 uppercase text-2xl font-bold">poultry</p>
+                        <a href="" class="no-underline text-white my-2">
+                            more info <span class="mdi mdi-arrow-right-thin"></span>
+                        </a>
+                        </p>
+                    </div>
+                    <div class="overflow-hidden absolute min-w-full min-h-full card-video cv-3">
+                        <video autoplay loop muted src="../public/video/animals-3.mp4"
+                            class="bg-cover absolute m-0 min-w-full min-h-full -z-[100]"></video>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="relative lg:absolute w-full h-[400px] lg:h-screen rounded-none p-0 overflow-hidden brightness-100 lg:brightness-50 transition-all duration-500 col-span-4 lg:col-[4/4] hover:brightness-100 animals-card ac-4">
+                <div
+                    class="absolute w-80 h-5/6 lg:h-1/2 cursor-pointer opacity-0 left-[10%] lg:left-1/2 top-[10%] lg:top-1/4 -z-[101] c-info-parent cip-4">
+                    <div
+                        class="w-full h-full px-[30px] lg:p-8 bg-black overflow-x-hidden overflow-y-scroll transition-all duration-300 card-info c-info-4">
+                        <div
+                            class="absolute top-5 rigt-5 w-6 h-6 cursor-pointer z-[100] opacity-100 lg:opacity-0 c-info-mobile-close">
+                            <img src="../public/images/close.png" class="w-full h-full object-cover" alt="">
+                        </div>
+                        <div class="absolute top-5 right-5 w-6 h-6 cursor-pointer z-[100] opacity-0 lg:opacity-100">
+                            <img src="../public/images/drag.png" class="w-full h-full object-cover" alt="">
+                        </div>
+                        <div class="h-40 mt-[50px] lg:mt-5 mx-0 mb-8 card-info-img">
+                            <img src="../public/images/amphibia.jpg" class="object-cover w-full h-full" alt="">
+                        </div>
+                        <div class="card-info-text">
+                            <h2 class="text-white capitalize font-bold text-[40px]">amphibia</h2>
+                            <p class="text-white">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur,
+                                ratione
+                                molestiae
+                                mollitia
+                                ut ipsam laboriosam sapiente maiores quas dignissimos fuga odio harum sit asperiores,
+                                labore
+                                nesciunt sunt debitis qui veniam?</p>
+
+                            <p class="text-muted">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur,
+                                ratione
+                                molestiae
+                                mollitia
+                                ut ipsam laboriosam sapiente maiores quas dignissimos fuga odio harum sit asperiores,
+                                labore
+                                nesciunt sunt debitis qui veniam?</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="h-[400px] lg:h-screen rounded-none p-0 overflow-hidden card">
+                    <img src="../public/images/amphibia.jpg"
+                        class="transition-all duration-200 ease-in object-cover w-full h-full"></img>
+                    <div
+                        class="absolute text-white bottom-0 w-full h-2/5 lg:h-1/4 pt-5 pe-5 pb-0 ps-10 box-border translate-y-2.5 lg:translate-y-[100px] opacity-100 lg:opacity-0 origin-bottom transition-all duration-300 card__content">
+                        <p class="m-0 uppercase text-2xl font-bold">amphibia</p>
+                        <a href="" class="no-underline text-white my-2">
+                            more info <span class="mdi mdi-arrow-right-thin"></span>
+                        </a>
+                        </p>
+                    </div>
+                    <div class="overflow-hidden absolute min-w-full min-h-full card-video cv-4">
+                        <video autoplay loop muted src="../public/video/animals-4.mp4"
+                            class="bg-cover absolute m-0 min-w-full min-h-full -z-[100]"></video>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- animals end  -->
+
+    <!-- stone start -->
+
+    <section id="stone" class="h-[80vh] lg:h-screen relative flex justify-center py-5">
+        <div class="stone-title flex justify-center items-center">
+            <h2 class="absolute text-5xl text-white text-center z-40 top-[300px] opacity-70 stone-text">they cannot be
+                immortal</h2>
+        </div>
+        <img class="absolute w-[110px] lg:w-[195px] mt-40 opacity-50 stone-1" src="../public/images/stone1.png" alt="">
+        <img class="absolute w-20 lg:w-[152px] mr-[220px] lg:mr-[350px] -mt-[120px] lg:mt-[120px] stone-2"
+            src="../public/images/stone2.png" alt="">
+        <img class="absolute w-[60px] lg:w-[90px] ml-[230px] lg:ml-[450px] opacity-60 stone-3"
+            src="../public/images/stone3.png" alt="">
+        <img class="absolute w-[50px] lg:w-[119px] mr-[310px] lg:mr-[600px] opacity-40 stone-4"
+            src="../public/images/stone3.png" alt="">
+        <img class="absolute hidden lg:block w-[120px] lg:w-[195px] ml-[500px] opacity-40 stone-5"
+            src="../public/images/stone4.png" alt="">
+    </section>
+
+    <!-- stone end  -->
+
+
+    <!-- credit start  -->
+
+    <section id="credit">
+        <div class="grid grid-cols-2 lg:grid-cols-4">
+            <div class="relative border border-solid border-[#464646] h-80 credit-card">
+                <div class="card-body">
+                    <div class="relative h-[60px] mt-[100px] overflow-hidden text-center card-title">
+                        <h1 class="text-5xl leading-tight transition-all duration-300 text-white"><strong>2023</strong>
+                        </h1>
+                        <h1 class="text-5xl leading-tight transition-all duration-300 text-white"><strong>2023</strong>
+                        </h1>
+                    </div>
+                    <div
+                        class="absolute bottom-0 w-[90%] lg:w-full h-[30%] pt-5 pl-5 box-border origin-bottom card-text">
+                        <h5 class="text-white">Release date</h5>
+                        <p class="text-[#aeaeae] text-xs lg:text-base">September 11, 2023</p>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="relative border border-solid border-[#464646] h-80 credit-card overflow-hidden p-0 credit-card-img">
+                <div class="transition-all duration-[0.6s] brightness-50 card-images-1">
+                    <img src="../public/images/creditBg-2.jpg"
+                        class="transition-all duration-[2s] ease-in object-cover w-full h-full credit-card-2-img"></img>
+                </div>
+                <div class="card-body">
+                    <div
+                        class="absolute bottom-0 w-[90%] lg:w-full h-[30%] pt-5 pl-5 box-border origin-bottom card-text">
+                        <h5 class="text-white">Biogeography</h5>
+                        <p class="text-[#aeaeae] text-xs lg:text-base">Alfred Russel Wallace</p>
+                    </div>
+                    </p>
+                </div>
+            </div>
+            <div
+                class="relative border border-solid border-[#464646] overflow-hidden h-80 lg:col-span-2 credit-card card-flex">
+                <img src="../public/images/creditBg-3.png" data-speed="8"
+                    class="object-cover ml-0 lg:ml-[150px] brightness-50 transition-all duration-[0.6s] w-[230px] lg:w-[300px] credit-card-3-img layer">
+                <div class="card-body">
+                    <div
+                        class="absolute bottom-0 w-[90%] lg:w-full h-[30%] pt-5 pl-5 box-border origin-bottom card-text">
+                        <h5 class="text-white">Production</h5>
+                        <p class="text-[#aeaeae] text-xs lg:text-base">Fedee Entertainment</p>
+                    </div>
+                </div>
+            </div>
+            <div class="relative border border-solid border-[#464646] h-80 credit-card card-distributed">
+                <div class="py-2.5 lg:py-10 px-[30px] lg:px-20 card-images">
+                    <img src="../public/images/creditBg-4.png" alt=""
+                        class="max-w-full align-middle brightness-50 transition-all duration-[0.6s] mt-20 lg:mt-0 credit-card-6-img">
+                </div>
+                <div class="card-body">
+                    <div
+                        class="absolute bottom-0 w-[90%] lg:w-full h-[30%] pt-5 pl-5 box-border origin-bottom card-text">
+                        <h5 class="text-white">Distributed by</h5>
+                        <p class="text-[#aeaeae] text-xs lg:text-base">Quadrant</p>
+                    </div>
+                </div>
+            </div>
+            <div class="relative border border-solid border-[#464646] h-80 credit-card">
+                <div class="card-body">
+                    <div class="relative h-[60px] mt-[100px] overflow-hidden text-center card-title">
+                        <h1 class="text-5xl leading-tight transition-all duration-300 text-white"><strong>$17M</strong>
+                        </h1>
+                        <h1 class="text-5xl leading-tight transition-all duration-300 text-white"><strong>$17M</strong>
+                        </h1>
+                    </div>
+                    <div
+                        class="absolute bottom-0 w-[90%] lg:w-full h-[30%] pt-5 pl-5 box-border origin-bottom card-text">
+                        <h5 class="text-white">Budget</h5>
+                        <p class="text-[#aeaeae] text-xs lg:text-base">$17 million</p>
+                    </div>
+                </div>
+            </div>
+            <div class="relative border border-solid border-[#464646] h-80 credit-card card-music">
+                <div class="p-5 lg:p-10 card-images">
+                    <img src="../public/images/creditBg-6.jpg" alt=""
+                        class="max-w-full align-middle brightness-50 transition-all duration-[0.6s] mt-20 lg:mt-0 credit-card-6-img">
+                </div>
+                <div class="card-body">
+                    <div
+                        class="absolute bottom-0 w-[90%] lg:w-full h-[30%] pt-5 pl-5 box-border origin-bottom card-text">
+                        <h5 class="text-white">Music by</h5>
+                        <p class="text-[#aeaeae] text-xs lg:text-base">James Arthur</p>
+                    </div>
+                </div>
+            </div>
+            <div class="relative border border-solid border-[#464646] h-80 col-span-2 lg:col-span-1 credit-card">
+                <div class="card-body">
+                    <div class="relative h-[60px] mt-[100px] overflow-hidden text-center card-title">
+                        <h1 class="text-5xl leading-tight transition-all duration-300 text-white"><strong>$56M</strong>
+                        </h1>
+                        <h1 class="text-5xl leading-tight transition-all duration-300 text-white"><strong>$56M</strong>
+                        </h1>
+                    </div>
+                    <div
+                        class="absolute bottom-0 w-[90%] lg:w-full h-[30%] pt-5 pl-5 box-border origin-bottom card-text">
+                        <h5 class="text-white">Box office</h5>
+                        <p class="text-[#aeaeae] text-xs lg:text-base">$56 million</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- credit end  -->
+
+    <!-- skull start  -->
+
+    <section id="skull-parent"
+        class="relative flex items-center justify-center overflow-hidden w-full h-screen mx-auto">
+        <img class="max-w-full align-middle inline-block opacity-10 absolute w-[260px] lg:w-[400px] skull"
+            src="../public/images/skull.png" alt="">
+        <img class="max-w-full align-middle inline-block absolute w-[520px] top-auto right-0 bottom-0 left-0 mx-0 z-[1] opacity-100 blur-[2px] people"
+            src="../public/images/people.png" alt="">
+    </section>
+
+    <!-- skull end  -->
+
+    <!-- gallery start  -->
+
+    <section id="gallery"
+        class="relative flex flex-col flex-[0_0_auto] items-center justify-center overflow-hidden w-screen h-screen mx-auto border-y border-solid border-[#ffffff33]">
+        <div class="absolute flex flex-row justify-center items-center overflow-hidden w-full h-screen gallery-grid">
+            <div class="relative h-full flex-1 grid">
+                <div class="absolute left-auto top-0 right-0 bottom-0 w-px h-full bg-[#ffffff33] grid-line gl-1"></div>
+            </div>
+            <div class="relative h-full flex-1 grid">
+                <div class="absolute left-auto top-0 right-0 bottom-0 w-px h-full bg-[#ffffff33] grid-line"></div>
+            </div>
+            <div class="relative h-full flex-1 grid">
+                <div class="absolute left-auto top-0 right-0 bottom-0 w-px h-full bg-[#ffffff33] grid-line"></div>
+            </div>
+            <div class="relative h-full flex-1 grid"></div>
+        </div>
+        <div class="absolute z-[3] flex flex-col justify-center items-center w-full h-screen gallery-title">
+            <div
+                class="absolute flex justify-center items-center rounded-full bg-black cursor-pointer opacity-0 overflow-hidden w-10 h-10 transition-all duration-300 ease-in close-gallery">
+                <img class="absolute max-w-full align-middle inline-block transition-all duration-300 close-img ci-1"
+                    src="../public/images/close.png" alt="">
+                <img class="absolute max-w-full align-middle inline-block transition-all duration-300 close-img translate-y-10 ci-2"
+                    src="../public/images/close.png" alt="">
+            </div>
+            <div
+                class="flex flex-col justify-center items-center text-center transition-all duration-300 ease-in title-parent">
+                <h2 class="text-white text-4xl leading-[44px] mt-5 mb-2.5 title-text">Gallery</h2>
+                <div class="relative text-white font-[15px] cursor-pointer py-[5px] px-2 bg-black g-close">View Gallery
+                </div>
+            </div>
+        </div>
+        <div class="grid auto-cols-fr grid-cols-8 grid-rows-7 gap-1 relative w-full h-full gallery-layout">
+            <div id="g-img-1"
+                class="bg-[50%_50%] bg-cover bg-no-repeat transition-all duration-300 ease-in bg-[url('../public/images/amphibia.jpg')] row-span-2 col-span-3 gallery-img gi-1">
+            </div>
+            <div id="g-img-2"
+                class="bg-[50%_50%] bg-cover bg-no-repeat transition-all duration-300 ease-in bg-[url('../public/images/mammals.jpg')] row-span-2 col-span-1 gallery-img gi-2">
+            </div>
+            <div id="g-img-3"
+                class="bg-[50%_50%] bg-cover bg-no-repeat transition-all duration-300 ease-in bg-[url('../public/images/poultry.jpg')] gallery-img gi-3">
+            </div>
+            <div id="g-img-4"
+                class="bg-[50%_50%] bg-cover bg-no-repeat transition-all duration-300 ease-in bg-[url('../public/images/reptile.jpg')] row-span-2 col-span-3 gallery-img gi-4">
+            </div>
+            <div id="g-img-5"
+                class="bg-[50%_50%] bg-cover bg-no-repeat transition-all duration-300 ease-in bg-[url('../public/images/creditBg-2.jpg')] gallery-img gi-5">
+            </div>
+            <div id="g-img-6"
+                class="bg-[50%_50%] bg-cover bg-no-repeat transition-all duration-300 ease-in bg-[url('../public/images/creditBg-2.jpg')] row-span-2 col-span-2 gallery-img gi-6">
+            </div>
+            <div id="g-img-7"
+                class="bg-[50%_50%] bg-cover bg-no-repeat transition-all duration-300 ease-in bg-[url('../public/images/creditBg-6.jpg')] row-span-5 col-span-3 gallery-img gi-7">
+            </div>
+            <div id="g-img-8"
+                class="bg-[50%_50%] bg-cover bg-no-repeat transition-all duration-300 ease-in bg-[url('../public/images/amphibia.jpg')] row-span-4 col-span-3 gallery-img gi-8">
+            </div>
+            <div id="g-img-9"
+                class="bg-[50%_50%] bg-cover bg-no-repeat transition-all duration-300 ease-in bg-[url('../public/images/poultry.jpg')] row-span-3 col-span-2 gallery-img gi-9">
+            </div>
+            <div id="g-img-10"
+                class="bg-[50%_50%] bg-cover bg-no-repeat transition-all duration-300 ease-in bg-[url('../public/images/mammals.jpg')] row-span-1 col-span-1 gallery-img gi-10">
+            </div>
+            <div id="g-img-11"
+                class="bg-[50%_50%] bg-cover bg-no-repeat transition-all duration-300 ease-in bg-[url('../public/images/reptile.jpg')] row-span-1 col-span-2 gallery-img gi-11">
+            </div>
+        </div>
+        <a href="#footer"
+            class="absolute left-0 top-auto right-0 bottom-0 z-10 w-20 mx-auto p-[8px] bg-black text-[15px] text-center text-white cursor-pointer max-w-full inline-block share-btn">Share</a>
+    </section>
+
+    <!-- gallery end  -->
+
+    <!-- footer start  -->
+
+    <section id="footer" class="relative h-screen flex flex-col justify-between items-center ">
+        <div class="absolute left-1/2 top-[50px] right-auto bottom-0 overflow-hidden w-px h-40 draw-line-2">
+            <div class="w-px h-full bg-white draw-line-inner-2"></div>
+        </div>
+        <div class="text-center text-white mt-[340px] lg:mt-60 footer-title">
+            <p>Share this experience</p>
+            <h1 class="mb-[15px]">deHayvan.rf.gd</h1>
+            <a class="no-underline text-white back-top" onclick="scrollToTop()">Back to top</a>
+        </div>
+        <div class="text-center text-[#ffffffc2] text-[10px] lg:text-xs uppercase mb-10 tracking-[1.5px] footer-bottom">
+            created by muhammad fidiansyah - dehayvan
+        </div>
+    </section>
+
+    <!-- footer end  -->
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"
+        integrity="sha512-cOH8ndwGgPo+K7pTvMrqYbmI8u8k6Sho3js0gOqVWTmQMlLIi6TbqGWRTpf1ga8ci9H3iPsvDLr4X7xwhC/+DQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"
+        integrity="sha512-AMl4wfwAmDM1lsQvVBBRHYENn1FR8cfOTpt8QVbb/P55mYOdahHD4LmHM1W55pNe3j/3od8ELzPf/8eNkkjISQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/Draggable.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
