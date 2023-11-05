@@ -35,7 +35,7 @@ const cip4 = document.querySelector('.cip-4');
 const closeVideo = document.querySelector('.close-video');
 const nav = document.querySelector('nav');
 
-if (window.matchMedia("(max-width: 500px)").matches) {
+if (window.matchMedia("(max-width: 1024px)").matches) {
 
     // Scroll To Plot (Mobile Version)
     function scrollToPlot() {
@@ -97,12 +97,11 @@ if (window.matchMedia("(max-width: 500px)").matches) {
         cip1.style.zIndex = "101";
         cip1.style.opacity = "1";
         aC1.style.zIndex = "99";
-        aC1.style.gridColumn = "1/6";
-        aC2.style.opacity = "0";
-        aC3.style.opacity = "0";
-        aC4.style.opacity = "0";
+        aC2.style.width = "0";
+        aC3.style.width = "0";
+        aC4.style.width = "0";
         closeVideo.style.opacity = "1";
-        nav.style.transform = "translateY(-100px)"
+        nav.style.transform = "translateY(-150px)"
     })
 
     aC2.addEventListener("click", () => {
@@ -110,12 +109,11 @@ if (window.matchMedia("(max-width: 500px)").matches) {
         cip2.style.zIndex = "101";
         cip2.style.opacity = "1";
         aC2.style.zIndex = "99";
-        aC2.style.gridColumn = "1/6";
-        aC1.style.opacity = "0";
-        aC3.style.opacity = "0";
-        aC4.style.opacity = "0";
+        aC1.style.width = "0";
+        aC3.style.width = "0";
+        aC4.style.width = "0";
         closeVideo.style.opacity = "1";
-        nav.style.transform = "translateY(-100px)"
+        nav.style.transform = "translateY(-150px)"
     })
 
     aC3.addEventListener("click", () => {
@@ -123,12 +121,11 @@ if (window.matchMedia("(max-width: 500px)").matches) {
         cip3.style.zIndex = "101";
         cip3.style.opacity = "1";
         aC3.style.zIndex = "99";
-        aC3.style.gridColumn = "1/6";
-        aC1.style.opacity = "0";
-        aC2.style.opacity = "0";
-        aC4.style.opacity = "0";
+        aC1.style.width = "0";
+        aC2.style.width = "0";
+        aC4.style.width = "0";
         closeVideo.style.opacity = "1";
-        nav.style.transform = "translateY(-100px)"
+        nav.style.transform = "translateY(-150px)"
     })
 
     aC4.addEventListener("click", () => {
@@ -136,12 +133,11 @@ if (window.matchMedia("(max-width: 500px)").matches) {
         cip4.style.zIndex = "101";
         cip4.style.opacity = "1";
         aC4.style.zIndex = "99";
-        aC4.style.gridColumn = "1/6";
-        aC1.style.opacity = "0";
-        aC2.style.opacity = "0";
-        aC2.style.opacity = "0";
+        aC1.style.width = "0";
+        aC2.style.width = "0";
+        aC3.style.width = "0";
         closeVideo.style.opacity = "1";
-        nav.style.transform = "translateY(-100px)"
+        nav.style.transform = "translateY(-150px)"
     })
 }
 
@@ -156,7 +152,7 @@ songButton.addEventListener("click", () => {
 // Close Video
 closeVideo.addEventListener("click", () => {
     for (let i = 0; i < animalsCard.length; i++) {
-        animalsCard[i].style.gridColumn = "";
+        animalsCard[i].style.width = "";
         animalsCard[i].style.opacity = "1";
     }
 
