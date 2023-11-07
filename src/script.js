@@ -383,6 +383,36 @@ mm.add({
         }
     })
 
+    gsap.from(".ac-1", {
+        y: 70, opacity: 0,
+        scrollTrigger: {
+            start: isMobile ? '0' : '20% center',
+            end: '21% center',
+        }
+    });
+
+    gsap.from(".ac-2", {
+        y: 70, opacity: 0, delay: 0.1,
+        scrollTrigger: {
+            start: isMobile ? '0' :'20% center',
+            end: '21% center',
+        }
+    });
+    gsap.from(".ac-3", {
+        y: 70, opacity: 0, delay: 0.2,
+        scrollTrigger: {
+            start: isMobile ? '0' : '20% center',
+            end: '21% center',
+        }
+    });
+    gsap.from(".ac-4", {
+        y: 70, opacity: 0, delay: 0.3,
+        scrollTrigger: {
+            start: isMobile ? '0' : '20% center',
+            end: '21% center',
+        }
+    });
+
     gsap.from(".stone-1", {
         rotation: 90,
         scrollTrigger: {
