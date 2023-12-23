@@ -52,6 +52,11 @@ const cmg1 = document.querySelector('.cmg-1');
 const cmg2 = document.querySelector('.cmg-2');
 const cmg3 = document.querySelector('.cmg-3');
 const cmg4 = document.querySelector('.cmg-4');
+const opnInfoAll = document.querySelectorAll('.open-info');
+const opnInfo1 = document.querySelector('.opnInfo-1');
+const opnInfo2 = document.querySelector('.opnInfo-2');
+const opnInfo3 = document.querySelector('.opnInfo-3');
+const opnInfo4 = document.querySelector('.opnInfo-4');
 const closeVideo = document.querySelector('.close-video');
 const nav = document.querySelector('header');
 
@@ -220,6 +225,26 @@ if (window.matchMedia("(max-width: 1024px)").matches) {
         cmg4.style.height = "350px";
     })
 
+    opnInfo1.addEventListener("click", () => {
+        cip1.style.display = "block";
+        opnInfo1.style.display = "none";
+    })
+
+    opnInfo2.addEventListener("click", () => {
+        cip2.style.display = "block";
+        opnInfo2.style.display = "none";
+    })
+
+    opnInfo3.addEventListener("click", () => {
+        cip3.style.display = "block";
+        opnInfo3.style.display = "none";
+    })
+    
+    opnInfo4.addEventListener("click", () => {
+        cip4.style.display = "block";
+        opnInfo4.style.display = "none";
+    })
+
     for (let i = 0; i < cCloseEx.length; i++) {
 
         cCloseEx[i].addEventListener("click", () => {
@@ -232,6 +257,10 @@ if (window.matchMedia("(max-width: 1024px)").matches) {
                 cInfoImg[i].style.height = "";
             }
 
+            for (let i = 0; i < opnInfoAll.length; i++) {
+                opnInfoAll[i].style.display = "block";
+            }
+
             for (let i = 0; i < cInfoParent.length; i++) {
                 cInfoParent[i].style.width = "";
                 cInfoParent[i].style.height = "";
@@ -240,9 +269,11 @@ if (window.matchMedia("(max-width: 1024px)").matches) {
                 cInfoParent[i].style.right = "";
                 cInfoParent[i].style.bottom = "";
                 cInfoParent[i].style.transform = "translateX()";
+                cInfoParent[i].style.display = "none";
             }
 
             cCloseEx[i].style.opacity = "";
+
         })
     }
 }
@@ -258,9 +289,14 @@ closeVideo.addEventListener("click", () => {
         cardVideo[i].style.zIndex = "";
     }
 
+    for (let i = 0; i < opnInfoAll.length; i++) {
+        opnInfoAll[i].style.display = "none";
+    }
+
     for (let i = 0; i < cInfoParent.length; i++) {
         cInfoParent[i].style.zIndex = "";
         cInfoParent[i].style.opacity = "";
+        cInfoParent[i].style.display = "block";
     }
 
     closeVideo.style.opacity = "0";
