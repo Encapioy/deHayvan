@@ -32,8 +32,28 @@ const cip1 = document.querySelector('.cip-1');
 const cip2 = document.querySelector('.cip-2');
 const cip3 = document.querySelector('.cip-3');
 const cip4 = document.querySelector('.cip-4');
+const cMobileClose = document.querySelectorAll('.c-info-mobile-close');
+const cm1 = document.querySelector('.cm-1');
+const cm2 = document.querySelector('.cm-2');
+const cm3 = document.querySelector('.cm-3');
+const cm4 = document.querySelector('.cm-4');
+const cExpand = document.querySelectorAll('.c-info-expand');
+const cex1 = document.querySelector('.cex-1');
+const cex2 = document.querySelector('.cex-2');
+const cex3 = document.querySelector('.cex-3');
+const cex4 = document.querySelector('.cex-4');
+const cCloseEx = document.querySelectorAll('.c-close-expand');
+const ccx1 = document.querySelector('.ccx-1');
+const ccx2 = document.querySelector('.ccx-2');
+const ccx3 = document.querySelector('.ccx-3');
+const ccx4 = document.querySelector('.ccx-4');
+const cInfoImg = document.querySelectorAll('.card-info-img');
+const cmg1 = document.querySelector('.cmg-1');
+const cmg2 = document.querySelector('.cmg-2');
+const cmg3 = document.querySelector('.cmg-3');
+const cmg4 = document.querySelector('.cmg-4');
 const closeVideo = document.querySelector('.close-video');
-const nav = document.querySelector('nav');
+const nav = document.querySelector('header');
 
 if (window.matchMedia("(max-width: 1024px)").matches) {
 
@@ -47,24 +67,32 @@ if (window.matchMedia("(max-width: 1024px)").matches) {
         cV1.style.zIndex = "100";
         cip1.style.zIndex = "101";
         cip1.style.opacity = "1";
+        cm1.style.zIndex = "102";
+        cm1.style.display = "block";
     })
 
     aC2.addEventListener("click", () => {
         cV2.style.zIndex = "100";
         cip2.style.zIndex = "101";
         cip2.style.opacity = "1";
+        cm2.style.zIndex = "102";
+        cm2.style.display = "block";
     })
 
     aC3.addEventListener("click", () => {
         cV3.style.zIndex = "100";
         cip3.style.zIndex = "101";
         cip3.style.opacity = "1";
+        cm3.style.zIndex = "102";
+        cm3.style.display = "block";
     })
 
     aC4.addEventListener("click", () => {
         cV4.style.zIndex = "100";
         cip4.style.zIndex = "101";
         cip4.style.opacity = "1";
+        cm4.style.zIndex = "102";
+        cm4.style.display = "block";
     })
 
 } else {
@@ -101,7 +129,7 @@ if (window.matchMedia("(max-width: 1024px)").matches) {
         aC3.style.width = "0";
         aC4.style.width = "0";
         closeVideo.style.opacity = "1";
-        nav.style.transform = "translateY(-150px)"
+        nav.style.transform = "translateY(-150px)";
     })
 
     aC2.addEventListener("click", () => {
@@ -139,15 +167,85 @@ if (window.matchMedia("(max-width: 1024px)").matches) {
         closeVideo.style.opacity = "1";
         nav.style.transform = "translateY(-150px)"
     })
+
+    cex1.addEventListener("click", () => {
+        cip1.style.width = "100%";
+        cip1.style.height = "100%";
+        cip1.style.top = "0";
+        cip1.style.left = "0";
+        cip1.style.right = "0";
+        cip1.style.bottom = "0";
+        cip1.style.transform = "translateX(0)";
+        ccx1.style.opacity = "1";
+        cex1.style.opacity = "0";
+        cmg1.style.height = "350px";
+    })
+
+    cex2.addEventListener("click", () => {
+        cip2.style.width = "100%";
+        cip2.style.height = "100%";
+        cip2.style.top = "0";
+        cip2.style.left = "0";
+        cip2.style.right = "0";
+        cip2.style.bottom = "0";
+        cip2.style.transform = "translateX(0)";
+        ccx2.style.opacity = "1";
+        cex2.style.opacity = "0";
+        cmg2.style.height = "350px";
+    })
+
+    cex3.addEventListener("click", () => {
+        cip3.style.width = "100%";
+        cip3.style.height = "100%";
+        cip3.style.top = "0";
+        cip3.style.left = "0";
+        cip3.style.right = "0";
+        cip3.style.bottom = "0";
+        cip3.style.transform = "translateX(0)";
+        ccx3.style.opacity = "1";
+        cex3.style.opacity = "0";
+        cmg3.style.height = "350px";
+    })
+
+    cex4.addEventListener("click", () => {
+        cip4.style.width = "100%";
+        cip4.style.height = "100%";
+        cip4.style.top = "0";
+        cip4.style.left = "0";
+        cip4.style.right = "0";
+        cip4.style.bottom = "0";
+        cip4.style.transform = "translateX(0)";
+        ccx4.style.opacity = "1";
+        cex4.style.opacity = "0";
+        cmg4.style.height = "350px";
+    })
+
+    for (let i = 0; i < cCloseEx.length; i++) {
+
+        cCloseEx[i].addEventListener("click", () => {
+
+            for (let i = 0; i < cExpand.length; i++) {
+                cExpand[i].style.opacity = "1";
+            }
+
+            for (let i = 0; i < cInfoImg.length; i++) {
+                cInfoImg[i].style.height = "";
+            }
+
+            for (let i = 0; i < cInfoParent.length; i++) {
+                cInfoParent[i].style.width = "";
+                cInfoParent[i].style.height = "";
+                cInfoParent[i].style.top = "";
+                cInfoParent[i].style.left = "";
+                cInfoParent[i].style.right = "";
+                cInfoParent[i].style.bottom = "";
+                cInfoParent[i].style.transform = "translateX()";
+            }
+
+            cCloseEx[i].style.opacity = "";
+        })
+    }
 }
-
-// Floating Song
-const songButton = document.querySelector(".song")
-const songFrame = document.querySelector(".song-frame")
-
-songButton.addEventListener("click", () => {
-    songFrame.classList.toggle("active");
-})
 
 // Close Video
 closeVideo.addEventListener("click", () => {
@@ -167,6 +265,32 @@ closeVideo.addEventListener("click", () => {
 
     closeVideo.style.opacity = "0";
     nav.style.transform = "translateY(0px)";
+})
+
+for (let i = 0; i < cMobileClose.length; i++) {
+
+    cMobileClose[i].addEventListener("click", () => {
+
+        for (let i = 0; i < cardVideo.length; i++) {
+            cardVideo[i].style.zIndex = "";
+        }
+
+        for (let i = 0; i < cInfoParent.length; i++) {
+            cInfoParent[i].style.zIndex = "";
+            cInfoParent[i].style.opacity = "";
+        }
+
+        cMobileClose[i].style.zIndex = "";
+        cMobileClose[i].style.display = "";
+    })
+}
+
+// Floating Song
+const songButton = document.querySelector(".song")
+const songFrame = document.querySelector(".song-frame")
+
+songButton.addEventListener("click", () => {
+    songFrame.classList.toggle("active");
 })
 
 // Credit Section
@@ -394,7 +518,7 @@ mm.add({
     gsap.from(".ac-2", {
         y: 70, opacity: 0, delay: 0.1,
         scrollTrigger: {
-            start: isMobile ? '0' :'20% center',
+            start: isMobile ? '0' : '20% center',
             end: '21% center',
         }
     });
@@ -414,29 +538,29 @@ mm.add({
     });
 
     gsap.from(".stone-1", {
-        rotation: 90,
+        rotation: 45,
         scrollTrigger: {
             start: '30% center',
             end: '45% center',
-            scrub: 2
+            scrub: 1
         }
     });
 
     gsap.to(".stone-2", {
-        rotation: 360, y: 550, opacity: 0.4,
+        rotation: 360, y: 650, opacity: 0.4,
         scrollTrigger: {
             start: '32% center',
-            end: '50% center',
-            scrub: 2
+            end: '54% center',
+            scrub: 1
         }
     });
 
     gsap.to(".stone-3", {
-        rotation: -180, y: 460,
+        rotation: -180, y: 550,
         scrollTrigger: {
-            start: '38% center',
-            end: '53% center',
-            scrub: 2
+            start: '36% center',
+            end: '56% center',
+            scrub: 1
         }
     });
 
@@ -445,7 +569,7 @@ mm.add({
         scrollTrigger: {
             start: '37% center',
             end: '50% center',
-            scrub: 2
+            scrub: 1
         }
     });
 
@@ -454,7 +578,7 @@ mm.add({
         scrollTrigger: {
             start: '39% center',
             end: '50% center',
-            scrub: 2
+            scrub: 1
         }
     });
 
@@ -462,26 +586,26 @@ mm.add({
         y: 80, opacity: 0,
         scrollTrigger: {
             start: '38% center',
-            end: '48% center',
-            scrub: 2
+            end: '47% center',
+            scrub: 1
         }
     });
 
     gsap.from(".skull", {
         scale: 0.5,
         scrollTrigger: {
-            start: isMobile ? '68% center' : '60% center',
-            end: isMobile ? '70% center' : '68% center',
-            scrub: 2
+            start: isMobile ? '68% center' : '62% center',
+            end: isMobile ? '80% center' : '70% center',
+            scrub: 1
         }
     });
 
     gsap.from(".people", {
-        y: 200,
+        y: 100,
         scrollTrigger: {
-            start: isMobile ? '68% center' : '60% center',
-            end: isMobile ? '75% center' : '75% center',
-            scrub: 2
+            start: isMobile ? '68% center' : '62% center',
+            end: isMobile ? '80% center' : '72% center',
+            scrub: 1
         }
     });
 

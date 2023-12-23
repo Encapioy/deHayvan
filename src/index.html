@@ -10,6 +10,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.3.67/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="style.css">
     <link href="/dist/output.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://db.onlinewebfonts.com/c/91d3afe918937141b6ae8e43b1005bc8?family=Sharp+Grotesk+Book+25+Regular"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -23,7 +28,7 @@
             0
         </div>
         <div class="flex flex-col justify-center items-center">
-            <h1 class="text-[2em] z-10 text-white">loading</h1>
+            <h1 class="text-[2em] z-10 text-white text-load">loading</h1>
             <div class="relative w-2 h-2 mt-1.5 rounded-full bg-white animate-dot"></div>
         </div>
     </div>
@@ -33,18 +38,24 @@
     <!-- floating contact start  -->
 
     <div
-        class="fixed top-1/2 right-0 -translate-y-1/2 h-40 bg-slate-200 overflow-hidden flex flex-col justify-center items-center z-[103] shadow-inner px-4 py-2">
-        <a href="" class="text-2xl no-underline">
+        class="fixed top-1/2 right-0 -translate-y-1/2 h-48 bg-slate-200 overflow-hidden flex flex-col justify-center items-center z-[103] shadow-inner px-4 py-2">
+        <a href="" class="text-xl no-underline">
             <span class="mdi mdi-facebook"></span>
         </a>
-        <a href="" class="text-2xl no-underline">
+        <a href="" class="text-xl no-underline">
             <span class="mdi mdi-whatsapp"></span>
         </a>
-        <a href="" class="text-2xl no-underline">
+        <a href="" class="text-xl no-underline">
             <span class="mdi mdi-instagram"></span>
         </a>
-        <a href="" class="text-2xl no-underline">
+        <a href="" class="text-xl no-underline">
             <span class="mdi mdi-twitter"></span>
+        </a>
+        <a href="" class="text-xl no-underline">
+            <span class="mdi mdi-youtube"></span>
+        </a>
+        <a href="" class="text-xl no-underline">
+            <span class="fa-brands fa-tiktok"></span>
         </a>
     </div>
     <!-- floating contact end  -->
@@ -52,21 +63,14 @@
     <!-- floating song start  -->
     <div class="hidden lg:block">
         <div
-            class="fixed bottom-12 right-16 w-9 h-9 rounded-full bg-black z-[103] flex flex-col justify-center items-center overflow-hidden p-2 cursor-pointer song">
+            class="fixed bottom-12 right-16 w-9 h-9 rounded-full bg-transparent z-[103] flex flex-col justify-center items-center overflow-hidden p-2 cursor-pointer song">
             <span class="text-white text-xl duration-300 translate-y-3.5 mdi mdi-volume-high object-cover"></span>
             <span class="text-white text-xl duration-300 translate-y-3.5 mdi mdi-volume-high object-cover"></span>
         </div>
         <div
-            class="fixed bottom-28 right-16 w-64 h-40 z-50 overflow-hidden rounded-lg translate-x-80 duration-300 song-frame">
-            <iframe width="100%" height="100%" scrolling="no" frameborder="no" allow="autoplay"
-                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1558051525&color=%23000000&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-            <div
-                style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
-                <a href="https://soundcloud.com/jefrina-haynes-585741467" title="Jefrina Haynes" target="_blank"
-                    style="color: #cccccc; text-decoration: none;">Jefrina Haynes</a> · <a
-                    href="https://soundcloud.com/jefrina-haynes-585741467/when-i-was-young" title="When I Was Young"
-                    target="_blank" style="color: #cccccc; text-decoration: none;">When I Was Young</a>
-            </div>
+            class="fixed bottom-16 right-16 w-[20rem] h-48 z-50 overflow-hidden rounded-lg translate-x-96 duration-300 song-frame">
+            <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay"
+                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1558051525&color=%23000000&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
         </div>
     </div>
     <!-- floating song end  -->
@@ -136,59 +140,80 @@
         <div
             class="hidden lg:block absolute top-10 right-8 z-[100] py-1.5 px-2 bg-black text-white text-xs cursor-pointer opacity-0 transition-all duration-300 close-video">
             Close Video</div>
+        <div
+            class="absolute w-6 h-6 cursor-pointer hidden -z-[102] lg:opacity-0 translate-x-12 translate-y-12 c-info-mobile-close cm-1">
+            <img src="../public/images/close.png" class="w-full h-full object-cover" alt="">
+        </div>
+        <div
+            class="absolute w-6 h-6 cursor-pointer hidden -z-[102] lg:opacity-0 translate-x-12 translate-y-[28rem] c-info-mobile-close cm-2">
+            <img src="../public/images/close.png" class="w-full h-full object-cover" alt="">
+        </div>
+        <div
+            class="absolute w-6 h-6 cursor-pointer hidden -z-[102] lg:opacity-0 translate-x-12 translate-y-[53rem] c-info-mobile-close cm-3">
+            <img src="../public/images/close.png" class="w-full h-full object-cover" alt="">
+        </div>
+        <div
+            class="absolute w-6 h-6 cursor-pointer hidden -z-[102] lg:opacity-0 translate-x-12 translate-y-[78rem] c-info-mobile-close cm-4">
+            <img src="../public/images/close.png" class="w-full h-full object-cover" alt="">
+        </div>
         <div class="w-screen h-full lg:h-screen block lg:flex animals-card-group">
-
+            <!-- animal card 1 -->
             <div
                 class="w-full h-[400px] lg:h-screen rounded-none p-0 overflow-hidden brightness-100 lg:brightness-50 transition-all duration-500 hover:brightness-100 animals-card ac-1">
-                <div
-                    class="absolute w-80 h-5/6 lg:h-1/2 cursor-pointer opacity-0 left-[10%] lg:left-1/2 top-[10%] lg:top-1/4 -z-[101] c-info-parent cip-1">
+                <div>
                     <div
-                        class="w-full h-full px-[30px] lg:p-8 bg-black overflow-x-hidden overflow-y-scroll transition-all duration-300 card-info c-info-1">
+                        class="absolute w-80 h-5/6 lg:h-1/2 cursor-pointer opacity-0 left-[10%] lg:left-1/2 top-[10%] lg:top-1/4 -z-[101] c-info-parent cip-1">
                         <div
-                            class="absolute top-5 rigt-5 w-6 h-6 cursor-pointer z-[100] opacity-100 lg:opacity-0 c-info-mobile-close">
-                            <img src="../public/images/close.png" class="w-full h-full object-cover" alt="">
-                        </div>
-                        <div class="absolute top-5 right-5 w-6 h-6 cursor-pointer z-[100] opacity-0 lg:opacity-100">
-                            <img src="../public/images/drag.png" class="w-full h-full object-cover" alt="">
-                        </div>
-                        <div class="h-40 mt-[50px] lg:mt-5 mx-0 mb-8 card-info-img">
-                            <img src="../public/images/mammals.jpg" class="object-cover w-full h-full" alt="">
-                        </div>
-                        <div class="card-info-text">
-                            <h2 class="text-white capitalize font-bold text-[40px]">mammals</h2>
-                            <p class="text-white">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur,
-                                ratione
-                                molestiae mollitia
-                                ut ipsam laboriosam sapiente maiores quas dignissimos fuga odio harum sit asperiores,
-                                labore
-                                nesciunt sunt debitis qui veniam?</p>
+                            class="w-full h-full px-[30px] lg:p-8 bg-black overflow-x-hidden overflow-y-scroll transition-all duration-300 card-info c-info-1">
+                            <div
+                                class="absolute top-5 right-7 w-6 h-6 cursor-pointer z-[100] opacity-0 lg:opacity-100 c-info-expand cex-1">
+                                <img src="../public/images/drag.png" class="w-full h-full object-cover" alt="">
+                            </div>
+                            <div class="absolute w-6 h-6 cursor-pointer opacity-0 top-5 left-7 c-close-expand ccx-1">
+                                <img src="../public/images/close.png" class="w-full h-full object-cover" alt="">
+                            </div>
+                            <div class="h-40 mt-[50px] lg:mt-5 mx-0 mb-8 card-info-img cmg-1">
+                                <img src="../public/images/mammals.jpg" class="object-cover w-full h-full" alt="">
+                            </div>
+                            <div class="card-info-text">
+                                <h2 class="text-white capitalize font-bold text-[40px]">mammals</h2>
+                                <p class="text-white">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur,
+                                    ratione
+                                    molestiae mollitia
+                                    ut ipsam laboriosam sapiente maiores quas dignissimos fuga odio harum sit
+                                    asperiores,
+                                    labore
+                                    nesciunt sunt debitis qui veniam?</p>
 
-                            <p class="text-gray-400">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur,
-                                ratione
-                                molestiae mollitia
-                                ut ipsam laboriosam sapiente maiores quas dignissimos fuga odio harum sit asperiores,
-                                labore
-                                nesciunt sunt debitis qui veniam?</p>
+                                <p class="text-gray-400">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                    Tenetur,
+                                    ratione
+                                    molestiae mollitia
+                                    ut ipsam laboriosam sapiente maiores quas dignissimos fuga odio harum sit
+                                    asperiores,
+                                    labore
+                                    nesciunt sunt debitis qui veniam?</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="relative h-[400px] lg:h-screen rounded-none p-0 overflow-hidden card">
-                    <img src="../public/images/mammals.jpg"
-                        class="transition-all duration-200 ease-in object-cover w-full h-full"></img>
-                    <div
-                        class="absolute text-white bottom-0 w-full h-2/5 lg:h-1/4 pt-5 pe-5 pb-0 ps-10 box-border translate-y-2.5 lg:translate-y-[100px] opacity-100 lg:opacity-0 origin-bottom transition-all duration-300 card__content">
-                        <p class="m-0 uppercase text-2xl font-semibold lg:font-bold">mammals</p>
-                        <a href="" class="no-underline text-white my-2">
-                            more info <span class="mdi mdi-arrow-right-thin"></span>
-                        </a>
-                    </div>
-                    <div class="absolute w-full h-full top-0 -z-[100] card-video cv-1">
-                        <video autoplay loop muted src="../public/video/animals-1.mp4"
-                            class="object-cover m-0  w-full h-full"></video>
+                    <div class="relative h-[400px] lg:h-screen rounded-none p-0 overflow-hidden card">
+                        <img src="../public/images/mammals.jpg"
+                            class="transition-all duration-200 ease-in object-cover w-full h-full"></img>
+                        <div
+                            class="absolute text-white bottom-0 w-full h-2/5 lg:h-1/4 pt-5 pe-5 pb-0 ps-10 box-border translate-y-2.5 lg:translate-y-[100px] opacity-100 lg:opacity-0 origin-bottom transition-all duration-300 card__content">
+                            <p class="m-0 uppercase text-2xl font-semibold lg:font-bold">mammals</p>
+                            <a href="" class="no-underline text-white my-2">
+                                more info <span class="mdi mdi-arrow-right-thin"></span>
+                            </a>
+                        </div>
+                        <div class="absolute w-full h-full top-0  -z-[100] card-video cv-1">
+                            <video controls autoplay loop muted src="../public/video/animals-1.mp4"
+                                class="object-cover m-0  w-full h-full"></video>
+                        </div>
                     </div>
                 </div>
             </div>
-
+            <!-- animal card 2 -->
             <div
                 class="relative w-full h-[400px] lg:h-screen rounded-none p-0 overflow-hidden brightness-100 lg:brightness-50 transition-all duration-500 hover:brightness-100 animals-card ac-2">
                 <div
@@ -196,13 +221,13 @@
                     <div
                         class="w-full h-full px-[30px] lg:p-8 bg-black overflow-x-hidden overflow-y-scroll transition-all duration-300 card-info c-info-2">
                         <div
-                            class="absolute top-5 rigt-5 w-6 h-6 cursor-pointer z-[100] opacity-100 lg:opacity-0 c-info-mobile-close">
-                            <img src="../public/images/close.png" class="w-full h-full object-cover" alt="">
-                        </div>
-                        <div class="absolute top-5 right-5 w-6 h-6 cursor-pointer z-[100] opacity-0 lg:opacity-100">
+                            class="absolute top-5 right-7 w-6 h-6 cursor-pointer z-[100] opacity-0 lg:opacity-100 c-info-expand cex-2">
                             <img src="../public/images/drag.png" class="w-full h-full object-cover" alt="">
                         </div>
-                        <div class="h-40 mt-[50px] lg:mt-5 mx-0 mb-8 card-info-img">
+                        <div class="absolute w-6 h-6 cursor-pointer opacity-0 top-5 left-7 c-close-expand ccx-2">
+                            <img src="../public/images/close.png" class="w-full h-full object-cover" alt="">
+                        </div>
+                        <div class="h-40 mt-[50px] lg:mt-5 mx-0 mb-8 card-info-img cmg-2">
                             <img src="../public/images/reptile.jpg" class="object-cover w-full h-full" alt="">
                         </div>
                         <div class="card-info-text">
@@ -237,26 +262,25 @@
                         </p>
                     </div>
                     <div class="absolute w-full h-full top-0 -z-[100] card-video cv-2">
-                        <video autoplay loop muted src="../public/video/animals-2.mp4"
+                        <video controls autoplay loop muted src="../public/video/animals-2.mp4"
                             class="object-cover m-0  w-full h-full"></video>
                     </div>
                 </div>
             </div>
-
+            <!-- animal card 3 -->
             <div
                 class="relative w-full h-[400px] lg:h-screen rounded-none p-0 overflow-hidden brightness-100 lg:brightness-50 transition-all duration-500 hover:brightness-100 animals-card ac-3">
                 <div
                     class="absolute w-80 h-5/6 lg:h-1/2 cursor-pointer opacity-0 left-[10%] lg:left-1/2 top-[10%] lg:top-1/4 -z-[101] c-info-parent cip-3">
                     <div
                         class="w-full h-full px-[30px] lg:p-8 bg-black overflow-x-hidden overflow-y-scroll transition-all duration-300 card-info c-info-3">
-                        <div
-                            class="absolute top-5 rigt-5 w-6 h-6 cursor-pointer z-[100] opacity-100 lg:opacity-0 c-info-mobile-close">
-                            <img src="../public/images/close.png" class="w-full h-full object-cover" alt="">
-                        </div>
-                        <div class="absolute top-5 right-5 w-6 h-6 cursor-pointer z-[100] opacity-0 lg:opacity-100">
+                        <div class="absolute top-5 right-7 w-6 h-6 cursor-pointer z-[100] opacity-0 lg:opacity-100 c-info-expand cex-3">
                             <img src="../public/images/drag.png" class="w-full h-full object-cover" alt="">
                         </div>
-                        <div class="h-40 mt-[50px] lg:mt-5 mx-0 mb-8 card-info-img">
+                        <div class="absolute w-6 h-6 cursor-pointer opacity-0 top-5 left-7 c-close-expand ccx-3">
+                            <img src="../public/images/close.png" class="w-full h-full object-cover" alt="">
+                        </div>
+                        <div class="h-40 mt-[50px] lg:mt-5 mx-0 mb-8 card-info-img cmg-3">
                             <img src="../public/images/poultry.jpg" class="object-cover w-full h-full" alt="">
                         </div>
                         <div class="card-info-text">
@@ -291,26 +315,25 @@
                         </p>
                     </div>
                     <div class="absolute w-full h-full top-0 -z-[100] card-video cv-3">
-                        <video autoplay loop muted src="../public/video/animals-3.mp4"
+                        <video controls autoplay loop muted src="../public/video/animals-3.mp4"
                             class="object-cover m-0  w-full h-full"></video>
                     </div>
                 </div>
             </div>
-
+            <!-- animal card 4 -->
             <div
                 class="relative w-full h-[400px] lg:h-screen rounded-none p-0 overflow-hidden brightness-100 lg:brightness-50 transition-all duration-500 hover:brightness-100 animals-card ac-4">
                 <div
                     class="absolute w-80 h-5/6 lg:h-1/2 cursor-pointer opacity-0 left-[10%] lg:left-1/2 top-[10%] lg:top-1/4 -z-[101] c-info-parent cip-4">
                     <div
                         class="w-full h-full px-[30px] lg:p-8 bg-black overflow-x-hidden overflow-y-scroll transition-all duration-300 card-info c-info-4">
-                        <div
-                            class="absolute top-5 rigt-5 w-6 h-6 cursor-pointer z-[100] opacity-100 lg:opacity-0 c-info-mobile-close">
-                            <img src="../public/images/close.png" class="w-full h-full object-cover" alt="">
-                        </div>
-                        <div class="absolute top-5 right-5 w-6 h-6 cursor-pointer z-[100] opacity-0 lg:opacity-100">
+                        <div class="absolute top-5 right-7 w-6 h-6 cursor-pointer z-[100] opacity-0 lg:opacity-100 c-info-expand cex-4">
                             <img src="../public/images/drag.png" class="w-full h-full object-cover" alt="">
                         </div>
-                        <div class="h-40 mt-[50px] lg:mt-5 mx-0 mb-8 card-info-img">
+                        <div class="absolute w-6 h-6 cursor-pointer opacity-0 top-5 left-7 c-close-expand ccx-4">
+                            <img src="../public/images/close.png" class="w-full h-full object-cover" alt="">
+                        </div>
+                        <div class="h-40 mt-[50px] lg:mt-5 mx-0 mb-8 card-info-img cmg-4">
                             <img src="../public/images/amphibia.jpg" class="object-cover w-full h-full" alt="">
                         </div>
                         <div class="card-info-text">
@@ -345,7 +368,7 @@
                         </p>
                     </div>
                     <div class="absolute w-full h-full top-0 -z-[100] card-video cv-4">
-                        <video autoplay loop muted src="../public/video/animals-4.mp4"
+                        <video controls autoplay loop muted src="../public/video/animals-4.mp4"
                             class="object-cover m-0  w-full h-full"></video>
                     </div>
                 </div>
@@ -358,19 +381,21 @@
 
     <!-- stone start -->
 
-    <section id="stone" class="h-screen lg:h-[130vh] relative flex justify-center lg:-mt-24">
+    <section id="stone" class="h-[75vh] lg:h-[130vh] relative flex justify-center lg:-mt-24">
         <div class="stone-title flex justify-center items-center">
-            <h2 class="absolute text-5xl text-white text-center z-40 top-[300px] opacity-70 stone-text">they cannot be
+            <h2
+                class="absolute text-4xl lg:text-5xl text-white text-center z-40 top-[250px] lg:top-[390px] opacity-70 stone-text">
+                they cannot be
                 immortal</h2>
         </div>
         <img class="absolute w-[110px] lg:w-[195px] mt-40 opacity-50 stone-1" src="../public/images/stone1.png" alt="">
-        <img class="absolute w-20 lg:w-[152px] mr-[220px] lg:mr-[350px] -mt-[120px] lg:mt-[120px] stone-2"
+        <img class="absolute w-20 lg:w-[152px] mr-[220px] lg:mr-[350px] -mt-[120px] lg:mt-[30px] stone-2"
             src="../public/images/stone2.png" alt="">
-        <img class="absolute w-[60px] lg:w-[90px] ml-[230px] lg:ml-[450px] opacity-60 stone-3"
+        <img class="absolute w-[60px] lg:w-[90px] ml-[230px] lg:ml-[650px] lg:mt-[180px] opacity-60 stone-3"
             src="../public/images/stone3.png" alt="">
         <img class="absolute w-[50px] lg:w-[119px] mr-[310px] lg:mr-[600px] opacity-40 stone-4"
             src="../public/images/stone3.png" alt="">
-        <img class="absolute hidden lg:block w-[120px] lg:w-[195px] ml-[500px] opacity-40 stone-5"
+        <img class="absolute hidden lg:block w-[120px] lg:w-[195px] ml-[650px] opacity-40 stone-5"
             src="../public/images/stone4.png" alt="">
     </section>
 
@@ -489,9 +514,9 @@
 
     <section id="skull-parent"
         class="relative flex items-center justify-center overflow-hidden w-full h-screen mx-auto">
-        <img class="max-w-full align-middle inline-block opacity-10 absolute w-[260px] lg:w-[400px] skull"
+        <img class="max-w-full align-middle inline-block opacity-10 absolute lg:w-[400px] skull"
             src="../public/images/skull.png" alt="">
-        <img class="max-w-full align-middle inline-block absolute w-[520px] top-auto right-0 bottom-0 left-0 mx-0 z-[1] opacity-100 blur-[2px] people"
+        <img class="max-w-full align-middle inline-block absolute w-full top-auto right-0 bottom-0 left-0 mx-0 z-[1] opacity-100 blur-[2px] people"
             src="../public/images/people.png" alt="">
     </section>
 
@@ -576,8 +601,8 @@
             <div class="w-px h-full bg-white draw-line-inner-2"></div>
         </div>
         <div class="text-center text-white mt-[340px] lg:mt-60 footer-title">
-            <p>Share this experience</p>
-            <h1 class="mb-[15px]">deHayvan.rf.gd</h1>
+            <p class="mb-3">Share this experience</p>
+            <h1 class="text-xl font-semibold mb-[15px]">deHayvan.rf.gd</h1>
             <a class="no-underline text-white back-top" onclick="scrollToTop()">Back to top</a>
         </div>
         <div class="text-center text-[#ffffffc2] text-[10px] lg:text-xs uppercase mb-10 tracking-[1.5px] footer-bottom">
