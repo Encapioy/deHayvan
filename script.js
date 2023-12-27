@@ -58,6 +58,7 @@ const opnInfo2 = document.querySelector('.opnInfo-2');
 const opnInfo3 = document.querySelector('.opnInfo-3');
 const opnInfo4 = document.querySelector('.opnInfo-4');
 const closeVideo = document.querySelector('.close-video');
+const videos = document.querySelectorAll('.video');
 const nav = document.querySelector('header');
 
 if (window.matchMedia("(max-width: 1024px)").matches) {
@@ -268,7 +269,7 @@ if (window.matchMedia("(max-width: 1024px)").matches) {
                 cInfoParent[i].style.left = "";
                 cInfoParent[i].style.right = "";
                 cInfoParent[i].style.bottom = "";
-                cInfoParent[i].style.transform = "translateX()";
+                cInfoParent[i].style.transform = "translateX(-150px)";
                 cInfoParent[i].style.display = "none";
             }
 
@@ -298,6 +299,10 @@ closeVideo.addEventListener("click", () => {
         cInfoParent[i].style.opacity = "";
         cInfoParent[i].style.display = "block";
     }
+
+    videos.forEach(function(video) {
+        video.muted = true;
+    })
 
     closeVideo.style.opacity = "0";
     nav.style.transform = "translateY(0px)";
@@ -583,7 +588,7 @@ mm.add({
     });
 
     gsap.to(".stone-2", {
-        rotation: 360, y: 650, opacity: 0.4,
+        rotation: 360, y: 750, opacity: 0.4,
         scrollTrigger: {
             start: '32% center',
             end: '54% center',
@@ -592,7 +597,7 @@ mm.add({
     });
 
     gsap.to(".stone-3", {
-        rotation: -180, y: 550,
+        rotation: -180, y: 650,
         scrollTrigger: {
             start: '36% center',
             end: '56% center',
