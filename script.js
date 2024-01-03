@@ -101,6 +101,92 @@ if (window.matchMedia("(max-width: 1024px)").matches) {
         cm4.style.display = "block";
     })
 
+    // close expand card info (Mobile Version)
+
+    ccx1.addEventListener("click", () => {
+        cex1.style.opacity = "1";
+        cmg1.style.height = "";
+        opnInfo1.style.display = "block";
+        cip1.style.width = "";
+        cip1.style.height = "";
+        cip1.style.top = "";
+        cip1.style.left = "";
+        cip1.style.right = "";
+        cip1.style.bottom = "";
+        cip1.style.transform = "translateX(-150px)";
+        cip1.style.display = "none";
+    })
+
+    ccx2.addEventListener("click", () => {
+        cex2.style.opacity = "1";
+        cmg2.style.height = "";
+        opnInfo2.style.display = "block";
+        cip2.style.width = "";
+        cip2.style.height = "";
+        cip2.style.top = "";
+        cip2.style.left = "";
+        cip2.style.right = "";
+        cip2.style.bottom = "";
+        cip2.style.transform = "translateX(-150px)";
+        cip2.style.display = "none";
+    })
+
+    ccx3.addEventListener("click", () => {
+        cex3.style.opacity = "1";
+        cmg3.style.height = "";
+        opnInfo3.style.display = "block";
+        cip3.style.width = "";
+        cip3.style.height = "";
+        cip3.style.top = "";
+        cip3.style.left = "";
+        cip3.style.right = "";
+        cip3.style.bottom = "";
+        cip3.style.transform = "translateX(-150px)";
+        cip3.style.display = "none";
+    })
+
+    ccx4.addEventListener("click", () => {
+        cex4.style.opacity = "1";
+        cmg4.style.height = "";
+        opnInfo4.style.display = "block";
+        cip4.style.width = "";
+        cip4.style.height = "";
+        cip4.style.top = "";
+        cip4.style.left = "";
+        cip4.style.right = "";
+        cip4.style.bottom = "";
+        cip4.style.transform = "translateX(-150px)";
+        cip4.style.display = "none";
+    })
+
+
+    // open card info (Mobile Version) 
+    opnInfo1.addEventListener("click", () => {
+        opnInfo1.style.display = "none";
+        cip1.style.display = "block";
+        cip1.style.transform = "translateX(0)";
+
+    })
+
+    opnInfo2.addEventListener("click", () => {
+        opnInfo2.style.display = "none";
+        cip2.style.display = "block";
+        cip2.style.transform = "translateX(0)";
+    })
+
+    opnInfo3.addEventListener("click", () => {
+        opnInfo3.style.display = "none";
+        cip3.style.display = "block";
+        cip3.style.transform = "translateX(0)";
+    })
+
+    opnInfo4.addEventListener("click", () => {
+        opnInfo4.style.display = "none";
+        cip4.style.display = "block";
+        cip4.style.transform = "translateX(0)";
+    })
+
+
 } else {
     // Scroll To Plot
     function scrollToPlot() {
@@ -174,58 +260,6 @@ if (window.matchMedia("(max-width: 1024px)").matches) {
         nav.style.transform = "translateY(-150px)"
     })
 
-    cex1.addEventListener("click", () => {
-        cip1.style.width = "100%";
-        cip1.style.height = "100%";
-        cip1.style.top = "0";
-        cip1.style.left = "0";
-        cip1.style.right = "0";
-        cip1.style.bottom = "0";
-        cip1.style.transform = "translateX(0)";
-        ccx1.style.opacity = "1";
-        cex1.style.opacity = "0";
-        cmg1.style.height = "350px";
-    })
-
-    cex2.addEventListener("click", () => {
-        cip2.style.width = "100%";
-        cip2.style.height = "100%";
-        cip2.style.top = "0";
-        cip2.style.left = "0";
-        cip2.style.right = "0";
-        cip2.style.bottom = "0";
-        cip2.style.transform = "translateX(0)";
-        ccx2.style.opacity = "1";
-        cex2.style.opacity = "0";
-        cmg2.style.height = "350px";
-    })
-
-    cex3.addEventListener("click", () => {
-        cip3.style.width = "100%";
-        cip3.style.height = "100%";
-        cip3.style.top = "0";
-        cip3.style.left = "0";
-        cip3.style.right = "0";
-        cip3.style.bottom = "0";
-        cip3.style.transform = "translateX(0)";
-        ccx3.style.opacity = "1";
-        cex3.style.opacity = "0";
-        cmg3.style.height = "350px";
-    })
-
-    cex4.addEventListener("click", () => {
-        cip4.style.width = "100%";
-        cip4.style.height = "100%";
-        cip4.style.top = "0";
-        cip4.style.left = "0";
-        cip4.style.right = "0";
-        cip4.style.bottom = "0";
-        cip4.style.transform = "translateX(0)";
-        ccx4.style.opacity = "1";
-        cex4.style.opacity = "0";
-        cmg4.style.height = "350px";
-    })
-
     opnInfo1.addEventListener("click", () => {
         cip1.style.display = "block";
         opnInfo1.style.display = "none";
@@ -240,12 +274,13 @@ if (window.matchMedia("(max-width: 1024px)").matches) {
         cip3.style.display = "block";
         opnInfo3.style.display = "none";
     })
-    
+
     opnInfo4.addEventListener("click", () => {
         cip4.style.display = "block";
         opnInfo4.style.display = "none";
     })
 
+    // close expand card info
     for (let i = 0; i < cCloseEx.length; i++) {
 
         cCloseEx[i].addEventListener("click", () => {
@@ -266,18 +301,75 @@ if (window.matchMedia("(max-width: 1024px)").matches) {
                 cInfoParent[i].style.width = "";
                 cInfoParent[i].style.height = "";
                 cInfoParent[i].style.top = "";
-                cInfoParent[i].style.left = "";
-                cInfoParent[i].style.right = "";
-                cInfoParent[i].style.bottom = "";
-                cInfoParent[i].style.transform = "translateX(-150px)";
                 cInfoParent[i].style.display = "none";
+                cInfoParent[i].style.left = "37%";
+
+                // if (cInfoParent[i].style.left === "50%") {
+                //     // Jika left = 50%, biarkan tetap 50%
+                //     cInfoParent[i].style.left = "50%";
+                // } else {
+                //     // Jika bukan 50%, atur menjadi 37%
+                // }
             }
 
             cCloseEx[i].style.opacity = "";
 
         })
     }
+
 }
+
+
+// expand card info 
+cex1.addEventListener("click", () => {
+    cip1.style.width = "100%";
+    cip1.style.height = "100%";
+    cip1.style.top = "0";
+    cip1.style.left = "0";
+    cip1.style.transform = "translateX(0)";
+    ccx1.style.opacity = "1";
+    cex1.style.opacity = "0";
+    cmg1.style.height = "350px";
+})
+
+cex2.addEventListener("click", () => {
+    cip2.style.width = "100%";
+    cip2.style.height = "100%";
+    cip2.style.top = "0";
+    cip2.style.left = "0";
+    cip2.style.right = "0";
+    cip2.style.bottom = "0";
+    cip2.style.transform = "translateX(0)";
+    ccx2.style.opacity = "1";
+    cex2.style.opacity = "0";
+    cmg2.style.height = "350px";
+})
+
+cex3.addEventListener("click", () => {
+    cip3.style.width = "100%";
+    cip3.style.height = "100%";
+    cip3.style.top = "0";
+    cip3.style.left = "0";
+    cip3.style.right = "0";
+    cip3.style.bottom = "0";
+    cip3.style.transform = "translateX(0)";
+    ccx3.style.opacity = "1";
+    cex3.style.opacity = "0";
+    cmg3.style.height = "350px";
+})
+
+cex4.addEventListener("click", () => {
+    cip4.style.width = "100%";
+    cip4.style.height = "100%";
+    cip4.style.top = "0";
+    cip4.style.left = "0";
+    cip4.style.right = "0";
+    cip4.style.bottom = "0";
+    cip4.style.transform = "translateX(0)";
+    ccx4.style.opacity = "1";
+    cex4.style.opacity = "0";
+    cmg4.style.height = "350px";
+})
 
 // Close Video
 closeVideo.addEventListener("click", () => {
@@ -300,7 +392,7 @@ closeVideo.addEventListener("click", () => {
         cInfoParent[i].style.display = "block";
     }
 
-    videos.forEach(function(video) {
+    videos.forEach(function (video) {
         video.muted = true;
     })
 
@@ -316,9 +408,15 @@ for (let i = 0; i < cMobileClose.length; i++) {
             cardVideo[i].style.zIndex = "";
         }
 
+        for (let i = 0; i < opnInfoAll.length; i++) {
+            opnInfoAll[i].style.display = "";
+        }
+
         for (let i = 0; i < cInfoParent.length; i++) {
             cInfoParent[i].style.zIndex = "";
             cInfoParent[i].style.opacity = "";
+            cInfoParent[i].style.display = "";
+            cInfoParent[i].style.transform = "translateX(0)";
         }
 
         cMobileClose[i].style.zIndex = "";
