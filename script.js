@@ -301,15 +301,8 @@ if (window.matchMedia("(max-width: 1024px)").matches) {
                 cInfoParent[i].style.width = "";
                 cInfoParent[i].style.height = "";
                 cInfoParent[i].style.top = "";
+                cInfoParent[i].style.left = "";
                 cInfoParent[i].style.display = "none";
-                cInfoParent[i].style.left = "37%";
-
-                // if (cInfoParent[i].style.left === "50%") {
-                //     // Jika left = 50%, biarkan tetap 50%
-                //     cInfoParent[i].style.left = "50%";
-                // } else {
-                //     // Jika bukan 50%, atur menjadi 37%
-                // }
             }
 
             cCloseEx[i].style.opacity = "";
@@ -325,8 +318,6 @@ cex1.addEventListener("click", () => {
     cip1.style.width = "100%";
     cip1.style.height = "100%";
     cip1.style.top = "0";
-    cip1.style.left = "0";
-    cip1.style.transform = "translateX(0)";
     ccx1.style.opacity = "1";
     cex1.style.opacity = "0";
     cmg1.style.height = "350px";
@@ -336,10 +327,6 @@ cex2.addEventListener("click", () => {
     cip2.style.width = "100%";
     cip2.style.height = "100%";
     cip2.style.top = "0";
-    cip2.style.left = "0";
-    cip2.style.right = "0";
-    cip2.style.bottom = "0";
-    cip2.style.transform = "translateX(0)";
     ccx2.style.opacity = "1";
     cex2.style.opacity = "0";
     cmg2.style.height = "350px";
@@ -349,10 +336,6 @@ cex3.addEventListener("click", () => {
     cip3.style.width = "100%";
     cip3.style.height = "100%";
     cip3.style.top = "0";
-    cip3.style.left = "0";
-    cip3.style.right = "0";
-    cip3.style.bottom = "0";
-    cip3.style.transform = "translateX(0)";
     ccx3.style.opacity = "1";
     cex3.style.opacity = "0";
     cmg3.style.height = "350px";
@@ -362,10 +345,6 @@ cex4.addEventListener("click", () => {
     cip4.style.width = "100%";
     cip4.style.height = "100%";
     cip4.style.top = "0";
-    cip4.style.left = "0";
-    cip4.style.right = "0";
-    cip4.style.bottom = "0";
-    cip4.style.transform = "translateX(0)";
     ccx4.style.opacity = "1";
     cex4.style.opacity = "0";
     cmg4.style.height = "350px";
