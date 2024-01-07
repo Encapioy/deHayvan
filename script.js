@@ -111,9 +111,6 @@ if (window.matchMedia("(max-width: 1024px)").matches) {
         cip1.style.height = "";
         cip1.style.top = "";
         cip1.style.left = "";
-        cip1.style.right = "";
-        cip1.style.bottom = "";
-        cip1.style.transform = "translateX(-150px)";
         cip1.style.display = "none";
     })
 
@@ -125,9 +122,6 @@ if (window.matchMedia("(max-width: 1024px)").matches) {
         cip2.style.height = "";
         cip2.style.top = "";
         cip2.style.left = "";
-        cip2.style.right = "";
-        cip2.style.bottom = "";
-        cip2.style.transform = "translateX(-150px)";
         cip2.style.display = "none";
     })
 
@@ -139,9 +133,6 @@ if (window.matchMedia("(max-width: 1024px)").matches) {
         cip3.style.height = "";
         cip3.style.top = "";
         cip3.style.left = "";
-        cip3.style.right = "";
-        cip3.style.bottom = "";
-        cip3.style.transform = "translateX(-150px)";
         cip3.style.display = "none";
     })
 
@@ -153,9 +144,6 @@ if (window.matchMedia("(max-width: 1024px)").matches) {
         cip4.style.height = "";
         cip4.style.top = "";
         cip4.style.left = "";
-        cip4.style.right = "";
-        cip4.style.bottom = "";
-        cip4.style.transform = "translateX(-150px)";
         cip4.style.display = "none";
     })
 
@@ -164,26 +152,22 @@ if (window.matchMedia("(max-width: 1024px)").matches) {
     opnInfo1.addEventListener("click", () => {
         opnInfo1.style.display = "none";
         cip1.style.display = "block";
-        cip1.style.transform = "translateX(0)";
 
     })
 
     opnInfo2.addEventListener("click", () => {
         opnInfo2.style.display = "none";
         cip2.style.display = "block";
-        cip2.style.transform = "translateX(0)";
     })
 
     opnInfo3.addEventListener("click", () => {
         opnInfo3.style.display = "none";
         cip3.style.display = "block";
-        cip3.style.transform = "translateX(0)";
     })
 
     opnInfo4.addEventListener("click", () => {
         opnInfo4.style.display = "none";
         cip4.style.display = "block";
-        cip4.style.transform = "translateX(0)";
     })
 
 
