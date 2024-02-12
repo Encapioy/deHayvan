@@ -38,25 +38,32 @@
     <!-- floating contact start  -->
 
     <div
-        class="fixed top-1/2 right-0 -translate-y-1/2 h-48 bg-slate-200 overflow-hidden flex flex-col justify-center items-center z-[103] shadow-inner px-4 py-2">
-        <a href="" class="text-xl no-underline">
-            <span class="mdi mdi-facebook"></span>
-        </a>
-        <a href="" class="text-xl no-underline">
-            <span class="mdi mdi-whatsapp"></span>
-        </a>
-        <a href="" class="text-xl no-underline">
-            <span class="mdi mdi-instagram"></span>
-        </a>
-        <a href="" class="text-xl no-underline">
-            <span class="mdi mdi-twitter"></span>
-        </a>
-        <a href="" class="text-xl no-underline">
-            <span class="mdi mdi-youtube"></span>
-        </a>
-        <a href="" class="text-xl no-underline">
-            <span class="fa-brands fa-tiktok"></span>
-        </a>
+        class="fixed top-1/2 right-0 -translate-y-1/2 h-48 bg-slate-200 z-[103] shadow-inner px-4 py-2 translate-x-[3.30rem] duration-300 f-contact">
+        <div class="flex flex-col justify-center items-center">
+            <a href="https://www.facebook.com/" class="text-xl no-underline">
+                <span class="mdi mdi-facebook"></span>
+            </a>
+            <a href="https://web.whatsapp.com/" class="text-xl no-underline">
+                <span class="mdi mdi-whatsapp"></span>
+            </a>
+            <a href="http://www.instagram.com/" class="text-xl no-underline">
+                <span class="mdi mdi-instagram"></span>
+            </a>
+            <a href="https://twitter.com/" class="text-xl no-underline">
+                <span class="mdi mdi-twitter"></span>
+            </a>
+            <a href="https://www.youtube.com/" class="text-xl no-underline">
+                <span class="mdi mdi-youtube"></span>
+            </a>
+            <a href="https://www.tiktok.com/" class="text-xl no-underline">
+                <span class="fa-brands fa-tiktok"></span>
+            </a>
+        </div>
+        <div
+            class="fixed top-1/2 right-12 -translate-y-1/2 h-9 flex flex-col justify-center items-center overflow-hidden cursor-pointer fc-open">
+            <span
+                class="mdi mdi-chevron-left text-3xl text-white object-cover transition-all duration-300 fc-icon"></span>
+        </div>
     </div>
     <!-- floating contact end  -->
 
@@ -139,7 +146,9 @@
     <section id="animals" class="relative w-screen h-full lg:h-screen">
         <div
             class="hidden lg:block absolute top-10 right-8 z-[100] py-1.5 px-2 bg-black text-white text-xs cursor-pointer opacity-0 transition-all duration-300 close-video">
-            Close Video</div>
+            Close Video
+        </div>
+
         <div
             class="absolute py-1.5 px-2 bg-black text-white text-xs cursor-pointer hidden -z-[102] lg:opacity-0 right-8 top-2 c-info-mobile-close cm-1">
             Close Video
@@ -156,6 +165,7 @@
             class="absolute py-1.5 px-2 bg-black text-white text-xs cursor-pointer hidden -z-[102] lg:opacity-0 right-8 top-[75.5rem] c-info-mobile-close cm-4">
             Close Video
         </div>
+
         <div class="w-screen h-full lg:h-screen block lg:flex animals-card-group">
             <!-- animal card 1 -->
             <div
@@ -165,11 +175,10 @@
                     View Info</div>
                 <div>
                     <div
-                        class="absolute w-80 h-5/6 lg:h-1/2 cursor-pointer opacity-0 left-1/2 top-[10%] lg:top-1/4 -z-[101] -translate-x-1/2 translate-y-1/2 c-info-parent cip-1">
+                        class="absolute w-80 h-5/6 lg:h-1/2 cursor-pointer opacity-0 left-1/2 top-[10%] lg:top-1/4 -z-[101] -translate-x-1/2 c-info-parent cip-1">
                         <div
                             class="w-full h-full px-[30px] lg:p-8 bg-black overflow-x-hidden overflow-y-scroll transition-all duration-300 card-info c-info-1">
-                            <div
-                                class="absolute top-5 right-7 w-6 h-6 cursor-pointer z-[100]  c-info-expand cex-1">
+                            <div class="absolute top-5 right-7 w-6 h-6 cursor-pointer z-[100]  c-info-expand cex-1">
                                 <img src="drag.png" class="w-full h-full object-cover" alt="">
                             </div>
                             <div class="absolute w-6 h-6 cursor-pointer top-5 left-7 c-close-expand ccx-1">
@@ -223,11 +232,10 @@
                     class="hidden absolute top-2 lg:top-12 left-8 z-[102] py-1.5 px-2 bg-black text-white text-xs cursor-pointer transition-all duration-300 open-info opnInfo-2">
                     View Info</div>
                 <div
-                    class="absolute w-80 h-5/6 lg:h-1/2 cursor-pointer opacity-0 left-1/2 top-[10%] lg:top-1/4 -z-[101] -translate-x-1/2 translate-y-1/2 c-info-parent cip-2">
+                    class="absolute w-80 h-5/6 lg:h-1/2 cursor-pointer opacity-0 left-1/2 top-[10%] lg:top-1/4 -z-[101] -translate-x-1/2 c-info-parent cip-2">
                     <div
                         class="w-full h-full px-[30px] lg:p-8 bg-black overflow-x-hidden overflow-y-scroll transition-all duration-300 card-info c-info-2">
-                        <div
-                            class="absolute top-5 right-7 w-6 h-6 cursor-pointer z-[100] c-info-expand cex-2">
+                        <div class="absolute top-5 right-7 w-6 h-6 cursor-pointer z-[100] c-info-expand cex-2">
                             <img src="drag.png" class="w-full h-full object-cover" alt="">
                         </div>
                         <div class="absolute w-6 h-6 cursor-pointer top-5 left-7 c-close-expand ccx-2">
@@ -279,11 +287,10 @@
                     class="hidden absolute top-2 lg:top-12 left-8 z-[102] py-1.5 px-2 bg-black text-white text-xs cursor-pointer transition-all duration-300 open-info opnInfo-3">
                     View Info</div>
                 <div
-                    class="absolute w-80 h-5/6 lg:h-1/2 cursor-pointer opacity-0 left-1/2 top-[10%] lg:top-1/4 -z-[101] -translate-x-1/2 translate-y-1/2 c-info-parent cip-3">
+                    class="absolute w-80 h-5/6 lg:h-1/2 cursor-pointer opacity-0 left-1/2 top-[10%] lg:top-1/4 -z-[101] -translate-x-1/2 c-info-parent cip-3">
                     <div
                         class="w-full h-full px-[30px] lg:p-8 bg-black overflow-x-hidden overflow-y-scroll transition-all duration-300 card-info c-info-3">
-                        <div
-                            class="absolute top-5 right-7 w-6 h-6 cursor-pointer z-[100] c-info-expand cex-3">
+                        <div class="absolute top-5 right-7 w-6 h-6 cursor-pointer z-[100] c-info-expand cex-3">
                             <img src="drag.png" class="w-full h-full object-cover" alt="">
                         </div>
                         <div class="absolute w-6 h-6 cursor-pointer top-5 left-7 c-close-expand ccx-3">
@@ -335,11 +342,10 @@
                     class="hidden absolute top-2 lg:top-12 left-8 z-[102] py-1.5 px-2 bg-black text-white text-xs cursor-pointer transition-all duration-300 open-info opnInfo-4">
                     View Info</div>
                 <div
-                    class="absolute w-80 h-5/6 lg:h-1/2 cursor-pointer opacity-0 left-1/2 top-[10%] lg:top-1/4 -z-[101] -translate-x-1/2 translate-y-1/2 c-info-parent cip-4">
+                    class="absolute w-80 h-5/6 lg:h-1/2 cursor-pointer opacity-0 left-1/2 top-[10%] lg:top-1/4 -z-[101] -translate-x-1/2 c-info-parent cip-4">
                     <div
                         class="w-full h-full px-[30px] lg:p-8 bg-black overflow-x-hidden overflow-y-scroll transition-all duration-300 card-info c-info-4">
-                        <div
-                            class="absolute top-5 right-7 w-6 h-6 cursor-pointer z-[100] c-info-expand cex-4">
+                        <div class="absolute top-5 right-7 w-6 h-6 cursor-pointer z-[100] c-info-expand cex-4">
                             <img src="drag.png" class="w-full h-full object-cover" alt="">
                         </div>
                         <div class="absolute w-6 h-6 cursor-pointer top-5 left-7 c-close-expand ccx-4">
@@ -612,7 +618,8 @@
         </div>
         <div class="text-center text-white mt-[340px] lg:mt-60 footer-title">
             <p class="mb-3">Share this experience</p>
-            <h1 class="text-3xl lg:text-4xl font-semibold mb-[15px]">deHayvan.rf.gd</h1>
+            <h1 class="text-3xl lg:text-4xl font-semibold mb-[15px] cursor-pointer" onclick="shareLink()">deHayvan.rf.gd
+            </h1>
             <a class="no-underline text-xs text-white cursor-pointer back-top" onclick="scrollToTop()">Back to top</a>
         </div>
         <div class="text-center text-[#ffffffc2] text-[10px] lg:text-xs uppercase mb-10 tracking-[1.5px] footer-bottom">
@@ -621,6 +628,34 @@
     </section>
 
     <!-- footer end  -->
+
+    <!-- share link -->
+    <div
+        class="fixed bottom-0 bg-slate-200 w-full flex flex-col justify-center items-center z-[105] translate-y-32 duration-300 share-link">
+        <div class="cursor-pointer sl-close">
+            <span class="mdi mdi-chevron-down text-3xl object-cover"></span>
+        </div>
+        <div class="w-full flex justify-around py-5">
+            <a href="https://www.facebook.com/" class="text-4xl no-underline">
+                <span class="mdi mdi-facebook"></span>
+            </a>
+            <a href="https://web.whatsapp.com/" class="text-4xl no-underline">
+                <span class="mdi mdi-whatsapp"></span>
+            </a>
+            <a href="http://www.instagram.com/" class="text-4xl no-underline">
+                <span class="mdi mdi-instagram"></span>
+            </a>
+            <a href="https://twitter.com/" class="text-4xl no-underline">
+                <span class="mdi mdi-twitter"></span>
+            </a>
+            <a href="https://www.youtube.com/" class="text-4xl no-underline">
+                <span class="mdi mdi-youtube"></span>
+            </a>
+            <a href="https://www.tiktok.com/" class="text-4xl no-underline">
+                <span class="fa-brands fa-tiktok"></span>
+            </a>
+        </div>
+    </div>
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"

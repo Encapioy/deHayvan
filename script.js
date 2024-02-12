@@ -11,6 +11,15 @@ function counter() {
 }
 counter()
 
+// Floating contact
+const fContact = document.querySelector('.f-contact');
+const fcIcon = document.querySelector('.fc-icon');
+
+document.querySelector('.fc-open').addEventListener("click", () => {
+    fContact.classList.toggle("open")
+    fcIcon.classList.toggle("rotate")
+})
+
 // Animals Section
 const animalsCard = document.querySelectorAll('.animals-card');
 const aC1 = document.querySelector('.ac-1');
@@ -22,11 +31,6 @@ const cV1 = document.querySelector('.cv-1');
 const cV2 = document.querySelector('.cv-2');
 const cV3 = document.querySelector('.cv-3');
 const cV4 = document.querySelector('.cv-4');
-const cardInfo = document.querySelectorAll('.card-info');
-const cInfo1 = document.querySelector('.c-info-1');
-const cInfo2 = document.querySelector('.c-info-2');
-const cInfo3 = document.querySelector('.c-info-3');
-const cInfo4 = document.querySelector('.c-info-4');
 const cInfoParent = document.querySelectorAll('.c-info-parent');
 const cip1 = document.querySelector('.cip-1');
 const cip2 = document.querySelector('.cip-2');
@@ -112,6 +116,7 @@ if (window.matchMedia("(max-width: 1024px)").matches) {
         cip1.style.top = "";
         cip1.style.left = "";
         cip1.style.display = "none";
+        cm1.style.right = "";
     })
 
     ccx2.addEventListener("click", () => {
@@ -123,6 +128,7 @@ if (window.matchMedia("(max-width: 1024px)").matches) {
         cip2.style.top = "";
         cip2.style.left = "";
         cip2.style.display = "none";
+        cm2.style.right = "";
     })
 
     ccx3.addEventListener("click", () => {
@@ -134,6 +140,7 @@ if (window.matchMedia("(max-width: 1024px)").matches) {
         cip3.style.top = "";
         cip3.style.left = "";
         cip3.style.display = "none";
+        cm3.style.right = "";
     })
 
     ccx4.addEventListener("click", () => {
@@ -145,6 +152,7 @@ if (window.matchMedia("(max-width: 1024px)").matches) {
         cip4.style.top = "";
         cip4.style.left = "";
         cip4.style.display = "none";
+        cm4.style.right = "";
     })
 
 
@@ -290,6 +298,7 @@ if (window.matchMedia("(max-width: 1024px)").matches) {
             }
 
             cCloseEx[i].style.opacity = "";
+            closeVideo.style.right = "";
 
         })
     }
@@ -302,36 +311,48 @@ cex1.addEventListener("click", () => {
     cip1.style.width = "100%";
     cip1.style.height = "100%";
     cip1.style.top = "0";
+    cip1.style.overflowY = "hidden";
     ccx1.style.opacity = "1";
     cex1.style.opacity = "0";
     cmg1.style.height = "350px";
+    closeVideo.style.right = "-100px";
+    cm1.style.right = "-100px";
 })
 
 cex2.addEventListener("click", () => {
     cip2.style.width = "100%";
     cip2.style.height = "100%";
     cip2.style.top = "0";
+    cip2.style.overflowY = "hidden";
     ccx2.style.opacity = "1";
     cex2.style.opacity = "0";
     cmg2.style.height = "350px";
+    closeVideo.style.right = "-100px";
+    cm2.style.right = "-100px";
 })
 
 cex3.addEventListener("click", () => {
     cip3.style.width = "100%";
     cip3.style.height = "100%";
     cip3.style.top = "0";
+    cip3.style.overflowY = "hidden";
     ccx3.style.opacity = "1";
     cex3.style.opacity = "0";
     cmg3.style.height = "350px";
+    closeVideo.style.right = "-100px";
+    cm3.style.right = "-100px";
 })
 
 cex4.addEventListener("click", () => {
     cip4.style.width = "100%";
     cip4.style.height = "100%";
     cip4.style.top = "0";
+    cip4.style.overflowY = "hidden";
     ccx4.style.opacity = "1";
     cex4.style.opacity = "0";
     cmg4.style.height = "350px";
+    closeVideo.style.right = "-100px";
+    cm4.style.right = "-100px";
 })
 
 // Close Video
@@ -470,6 +491,18 @@ gImg11.style.transform = "scale(0.6)";
 function scrollToTop() {
     window.scrollTo(0, 0);
 }
+
+// Share Link
+const share = document.querySelector(".share-link");
+
+function shareLink() {
+    share.style.transform = "translateY(0)";
+    navigator.clipboard.writeText("https://dehayvan.rf.gd/")
+}
+
+document.querySelector(".sl-close").addEventListener("click", () => {
+    share.style.transform = "translateY(8rem)";
+})
 
 
 

@@ -32,6 +32,15 @@ body {
     font-family: "Sharp Grotesk Book 25 Regular" !important;
 }
 
+/* FLOATING CONTACT */
+.f-contact.open {
+    transform: translateX(0) translateY(-50%);
+}
+
+.fc-icon.rotate {
+    transform: rotate(180deg);
+}
+
 /* SONG */
 
 .song:hover .mdi-volume-high {
