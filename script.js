@@ -384,6 +384,7 @@ closeVideo.addEventListener("click", () => {
     nav.style.transform = "translateY(0px)";
 })
 
+// Close Video (mobile version)
 for (let i = 0; i < cMobileClose.length; i++) {
 
     cMobileClose[i].addEventListener("click", () => {
@@ -400,7 +401,6 @@ for (let i = 0; i < cMobileClose.length; i++) {
             cInfoParent[i].style.zIndex = "";
             cInfoParent[i].style.opacity = "";
             cInfoParent[i].style.display = "";
-            cInfoParent[i].style.transform = "translateX(0)";
         }
 
         cMobileClose[i].style.zIndex = "";
@@ -493,16 +493,22 @@ function scrollToTop() {
 }
 
 // Share Link
-const share = document.querySelector(".share-link");
-
 function shareLink() {
-    share.style.transform = "translateY(0)";
-    navigator.clipboard.writeText("https://dehayvan.rf.gd/")
+    // Check for Web Share api support
+    if (navigator.share) {
+        // Browser supports native share api
+        navigator.share({
+            text: 'Please read this great article: ',
+            url: 'https://dehayvan.rf.gd/'
+        }).then(() => {
+            console.log('Thanks for sharing!');
+        })
+            .catch((err) => console.error(err));
+    } else {
+        // Fallback
+        alert("The current browser does not support the share function. Please, manually share the link")
+    }
 }
-
-document.querySelector(".sl-close").addEventListener("click", () => {
-    share.style.transform = "translateY(8rem)";
-})
 
 
 
